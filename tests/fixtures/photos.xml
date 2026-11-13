@@ -1,0 +1,533 @@
+<?xml version='1.0' encoding='utf-8'?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:ns4="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+  <responseDate>2026-11-13T18:31:14Z</responseDate>
+  <request>https://example.org/oai</request>
+  <ListRecords>
+    <record>
+      <header>
+        <identifier>837866ec-3f22-11e4-9dc7-3b4bf4a0ed46:bc8f6780-2da6-884b-3acb-d8c4370e26b2</identifier>
+        <datestamp>2022-02-11T16:00:16Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:photos</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:photos</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:date>1986-05</dc:date>
+          <dc:source>265211</dc:source>
+          <dc:creator>Galen, P. (Paul) van</dc:creator>
+          <ns4:created>1986-05</ns4:created>
+          <dc:description>Interieur, NAAR HET OOSTEN</dc:description>
+          <ns4:isPartOf>Collectie gebouwd</ns4:isPartOf>
+          <ns4:isPartOf>RCE - Gebouwd</ns4:isPartOf>
+          <ns4:identifier>265.211</ns4:identifier>
+          <ns4:references>20295511</ns4:references>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/bc8f6780-2da6-884b-3acb-d8c4370e26b2/media/78d153a9-1d07-7034-345f-195d1e77da7d</ns4:references>
+          <dc:identifier>20295511</dc:identifier>
+          <dc:identifier>265.211</dc:identifier>
+          <ns4:spatial>Kerkstraat</ns4:spatial>
+          <ns4:spatial>16</ns4:spatial>
+          <ns4:spatial>Varik</ns4:spatial>
+          <ns4:spatial>4064 EB</ns4:spatial>
+          <ns4:spatial>20295511</ns4:spatial>
+          <ns4:spatial>Adlib priref F&amp;D 20295511</ns4:spatial>
+          <ns4:relation>78d153a9-1d07-7034-345f-195d1e77da7d</ns4:relation>
+          <ns4:relation>Adlib priref F&amp;D 20295511</ns4:relation>
+          <dc:rights>http://creativecommons.org/licenses/by-sa/3.0/</dc:rights>
+          <ns4:title>Interieur, NAAR HET OOSTEN</ns4:title>
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>837866ec-3f22-11e4-9dc7-3b4bf4a0ed46:3b62c3c3-75d9-a702-9e8a-496549128b0a</identifier>
+        <datestamp>2019-11-29T19:37:04Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:photos</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:photos</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:date>1971-03</dc:date>
+          <dc:source>037237</dc:source>
+          <dc:creator>Tangel, L.M. (Loek)</dc:creator>
+          <ns4:created>1971-03</ns4:created>
+          <dc:description>overzicht</dc:description>
+          <ns4:isPartOf>Collectie gebouwd</ns4:isPartOf>
+          <ns4:isPartOf>RCE - Gebouwd</ns4:isPartOf>
+          <ns4:identifier>37.237</ns4:identifier>
+          <ns4:references>20089146</ns4:references>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/3b62c3c3-75d9-a702-9e8a-496549128b0a/media/79ac0fae-3a45-6f6c-8d4a-71cdd13e0bbb</ns4:references>
+          <dc:identifier>8895</dc:identifier>
+          <dc:identifier>20089146</dc:identifier>
+          <dc:identifier>37.237</dc:identifier>
+          <ns4:spatial>Laan v. Meerdervoort</ns4:spatial>
+          <ns4:spatial>213</ns4:spatial>
+          <ns4:spatial>'s-Gravenhage</ns4:spatial>
+          <ns4:spatial>8895</ns4:spatial>
+          <ns4:spatial>20089146</ns4:spatial>
+          <ns4:spatial>systeemkaart, Adlib priref F&amp;D 8895, 20089146</ns4:spatial>
+          <ns4:relation>79ac0fae-3a45-6f6c-8d4a-71cdd13e0bbb</ns4:relation>
+          <ns4:relation>systeemkaart, Adlib priref F&amp;D 8895, 20089146</ns4:relation>
+          <dc:rights>http://creativecommons.org/licenses/by-sa/3.0/</dc:rights>
+          <ns4:title>overzicht</ns4:title>
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>837866ec-3f22-11e4-9dc7-3b4bf4a0ed46:20d96e19-868a-f31b-51c6-966cb3074c9c</identifier>
+        <datestamp>2019-11-29T17:10:36Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:photos</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:photos</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:date>1985-05</dc:date>
+          <dc:source>255805</dc:source>
+          <dc:creator>Schollen, A.H.C. (Ton)</dc:creator>
+          <ns4:created>1985-05</ns4:created>
+          <dc:description>slecht pleisterwerk van voorgevel</dc:description>
+          <ns4:isPartOf>Collectie gebouwd</ns4:isPartOf>
+          <ns4:isPartOf>RCE - Gebouwd</ns4:isPartOf>
+          <ns4:identifier>255.805</ns4:identifier>
+          <ns4:references>20140652</ns4:references>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/20d96e19-868a-f31b-51c6-966cb3074c9c/media/1d93d64f-8546-d895-b69b-530ace1187c1</ns4:references>
+          <dc:identifier>14586</dc:identifier>
+          <dc:identifier>20140652</dc:identifier>
+          <dc:identifier>255.805</dc:identifier>
+          <ns4:spatial>Polanerzandweg</ns4:spatial>
+          <ns4:spatial>6/7</ns4:spatial>
+          <ns4:spatial>Linschoten</ns4:spatial>
+          <ns4:spatial>14586</ns4:spatial>
+          <ns4:spatial>20140652</ns4:spatial>
+          <ns4:spatial>systeemkaart, Adlib priref F&amp;D 14586, 20140652</ns4:spatial>
+          <ns4:relation>1d93d64f-8546-d895-b69b-530ace1187c1</ns4:relation>
+          <ns4:relation>systeemkaart, Adlib priref F&amp;D 14586, 20140652</ns4:relation>
+          <dc:rights>http://creativecommons.org/licenses/by-sa/3.0/</dc:rights>
+          <ns4:title>slecht pleisterwerk van voorgevel</ns4:title>
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>837866ec-3f22-11e4-9dc7-3b4bf4a0ed46:6ed5649a-9e32-85ca-e024-0a38b82856fa</identifier>
+        <datestamp>2024-08-16T10:04:36Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:photos</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:photos</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:date>1985-04</dc:date>
+          <dc:source>261245</dc:source>
+          <dc:creator>Galen, P. (Paul) van</dc:creator>
+          <ns4:created>1985-04</ns4:created>
+          <dc:description>Brug bij het park</dc:description>
+          <ns4:isPartOf>Collectie gebouwd</ns4:isPartOf>
+          <ns4:isPartOf>RCE - Gebouwd</ns4:isPartOf>
+          <ns4:identifier>261.245</ns4:identifier>
+          <ns4:coverage>Monumentnummer: 526294</ns4:coverage>
+          <ns4:references>20291658</ns4:references>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/6ed5649a-9e32-85ca-e024-0a38b82856fa/media/f57061aa-820d-b678-04f6-317e9e40b351</ns4:references>
+          <dc:identifier>20291658</dc:identifier>
+          <dc:identifier>526291</dc:identifier>
+          <dc:identifier>261.245</dc:identifier>
+          <ns4:spatial>De Horsterkamp</ns4:spatial>
+          <ns4:spatial>8</ns4:spatial>
+          <ns4:spatial>Vorden</ns4:spatial>
+          <ns4:spatial>7251 AZ</ns4:spatial>
+          <ns4:spatial>20291658</ns4:spatial>
+          <ns4:spatial>Adlib priref F&amp;D 20291658</ns4:spatial>
+          <dc:subject>kastelen (versterkte woning)</dc:subject>
+          <dc:subject>bruggen</dc:subject>
+          <dc:subject>parken</dc:subject>
+          <dc:subject>buitenplaatsen</dc:subject>
+          <ns4:relation>f57061aa-820d-b678-04f6-317e9e40b351</ns4:relation>
+          <ns4:relation>Adlib priref F&amp;D 20291658</ns4:relation>
+          <dc:rights>http://creativecommons.org/licenses/by-sa/3.0/</dc:rights>
+          <ns4:title>Brug bij het park</ns4:title>
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>837866ec-3f22-11e4-9dc7-3b4bf4a0ed46:6ed5a2bd-12ea-3e88-dabe-cbc9e191eee4</identifier>
+        <datestamp>2024-08-16T10:04:36Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:photos</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:photos</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:date>1989-10-09</dc:date>
+          <dc:source>310145</dc:source>
+          <dc:creator>Galen, P. (Paul) van</dc:creator>
+          <ns4:created>1989-10-09</ns4:created>
+          <dc:description>Interieur, overzicht naar het altaar</dc:description>
+          <ns4:isPartOf>Collectie gebouwd</ns4:isPartOf>
+          <ns4:isPartOf>RCE - Gebouwd</ns4:isPartOf>
+          <ns4:identifier>310.145</ns4:identifier>
+          <ns4:coverage>Monumentnummer: 507229</ns4:coverage>
+          <ns4:references>20289389</ns4:references>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/6ed5a2bd-12ea-3e88-dabe-cbc9e191eee4/media/1133ff71-2a5c-8911-4e0d-7697da0ab562</ns4:references>
+          <dc:identifier>20289389</dc:identifier>
+          <dc:identifier>310.145</dc:identifier>
+          <ns4:spatial>Markt</ns4:spatial>
+          <ns4:spatial>17</ns4:spatial>
+          <ns4:spatial>Meerssen</ns4:spatial>
+          <ns4:spatial>6231 LR</ns4:spatial>
+          <ns4:spatial>20289389</ns4:spatial>
+          <ns4:spatial>Adlib priref F&amp;D 20289389</ns4:spatial>
+          <dc:subject>grafkelders</dc:subject>
+          <dc:subject>altaren</dc:subject>
+          <ns4:relation>1133ff71-2a5c-8911-4e0d-7697da0ab562</ns4:relation>
+          <ns4:relation>Adlib priref F&amp;D 20289389</ns4:relation>
+          <dc:rights>http://creativecommons.org/licenses/by-sa/3.0/</dc:rights>
+          <ns4:title>Interieur, overzicht naar het altaar</ns4:title>
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>837866ec-3f22-11e4-9dc7-3b4bf4a0ed46:2959aa7c-e6fd-ebc3-c9ed-0de27c7b5bb1</identifier>
+        <datestamp>2024-10-16T17:38:46Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:photos</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:photos</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:date>1927</dc:date>
+          <dc:source>009943</dc:source>
+          <ns4:created>1927</ns4:created>
+          <dc:description>Interieur, beeld</dc:description>
+          <ns4:isPartOf>Collectie gebouwd</ns4:isPartOf>
+          <ns4:isPartOf>RCE - Gebouwd</ns4:isPartOf>
+          <ns4:identifier>9.943</ns4:identifier>
+          <ns4:coverage>Monumentnummer: 37209</ns4:coverage>
+          <ns4:references>20241518</ns4:references>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/2959aa7c-e6fd-ebc3-c9ed-0de27c7b5bb1/media/576cd779-05ba-687e-f627-2ec94e0f76fe</ns4:references>
+          <dc:identifier>20241518</dc:identifier>
+          <dc:identifier>23299</dc:identifier>
+          <dc:identifier>9.943</dc:identifier>
+          <ns4:spatial>Grote Markt</ns4:spatial>
+          <ns4:spatial>24</ns4:spatial>
+          <ns4:spatial>Venray</ns4:spatial>
+          <ns4:spatial>5801 BL</ns4:spatial>
+          <ns4:spatial>20241518</ns4:spatial>
+          <ns4:spatial>23299</ns4:spatial>
+          <ns4:spatial>Adlib priref F&amp;D, systeemkaart 20241518, 23299</ns4:spatial>
+          <dc:subject>heiligenbeelden</dc:subject>
+          <ns4:relation>576cd779-05ba-687e-f627-2ec94e0f76fe</ns4:relation>
+          <ns4:relation>Adlib priref F&amp;D, systeemkaart 20241518, 23299</ns4:relation>
+          <ns4:title>Interieur, beeld</ns4:title>
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>837866ec-3f22-11e4-9dc7-3b4bf4a0ed46:1495269e-c056-9fae-1305-d37c8ba40830</identifier>
+        <datestamp>2019-11-29T16:02:19Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:photos</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:photos</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:source>039261</dc:source>
+          <dc:description>plattegrond</dc:description>
+          <ns4:isPartOf>Collectie gebouwd</ns4:isPartOf>
+          <ns4:isPartOf>RCE - Gebouwd</ns4:isPartOf>
+          <ns4:identifier>39.261</ns4:identifier>
+          <ns4:coverage>Monumentnummer: 529188</ns4:coverage>
+          <ns4:references>20009082</ns4:references>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/1495269e-c056-9fae-1305-d37c8ba40830/media/2f7b356a-5ba5-9a86-cacc-c232555f836f</ns4:references>
+          <dc:identifier>765</dc:identifier>
+          <dc:identifier>20009082</dc:identifier>
+          <dc:identifier>39.261</dc:identifier>
+          <ns4:spatial>Heiligenbergerweg</ns4:spatial>
+          <ns4:spatial>113</ns4:spatial>
+          <ns4:spatial>Amersfoort</ns4:spatial>
+          <ns4:spatial>765</ns4:spatial>
+          <ns4:spatial>20009082</ns4:spatial>
+          <ns4:spatial>systeemkaart, Adlib priref F&amp;D 765, 20009082</ns4:spatial>
+          <ns4:relation>2f7b356a-5ba5-9a86-cacc-c232555f836f</ns4:relation>
+          <ns4:relation>systeemkaart, Adlib priref F&amp;D 765, 20009082</ns4:relation>
+          <dc:rights>http://creativecommons.org/licenses/by-sa/3.0/</dc:rights>
+          <ns4:title>plattegrond</ns4:title>
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>837866ec-3f22-11e4-9dc7-3b4bf4a0ed46:1749b7c6-b27d-7180-228a-d33a55beeac6</identifier>
+        <datestamp>2024-08-16T08:49:55Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:photos</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:photos</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:date>2002</dc:date>
+          <dc:source>413243</dc:source>
+          <dc:creator>Heuvel, Thea van den</dc:creator>
+          <ns4:created>2002</ns4:created>
+          <dc:description>Overzicht</dc:description>
+          <dc:description>Gefotografeerd voor Toonbeelden van de Wederopbouw</dc:description>
+          <ns4:isPartOf>Fotocollectie</ns4:isPartOf>
+          <ns4:isPartOf>RCE - Gebouwd</ns4:isPartOf>
+          <ns4:identifier>413.243</ns4:identifier>
+          <ns4:references>20398281</ns4:references>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/1749b7c6-b27d-7180-228a-d33a55beeac6/media/caa56c72-54ef-6ed0-a9bc-66d03d1e2e98</ns4:references>
+          <dc:identifier>20398281</dc:identifier>
+          <dc:identifier>413.243</dc:identifier>
+          <ns4:spatial>Noordhuizen</ns4:spatial>
+          <ns4:spatial>2</ns4:spatial>
+          <ns4:spatial>Alphen</ns4:spatial>
+          <ns4:spatial>6626 KH</ns4:spatial>
+          <ns4:spatial>20398281</ns4:spatial>
+          <ns4:spatial>Adlib priref F&amp;D 20398281</ns4:spatial>
+          <dc:subject>gemalen</dc:subject>
+          <ns4:relation>caa56c72-54ef-6ed0-a9bc-66d03d1e2e98</ns4:relation>
+          <ns4:relation>Adlib priref F&amp;D 20398281</ns4:relation>
+          <dc:rights>http://creativecommons.org/licenses/by-sa/3.0/</dc:rights>
+          <ns4:title>Overzicht</ns4:title>
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>837866ec-3f22-11e4-9dc7-3b4bf4a0ed46:174d0c9e-6a1a-f2da-edeb-2ee568883185</identifier>
+        <datestamp>2024-08-16T08:49:55Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:photos</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:photos</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:date>1997</dc:date>
+          <dc:source>411248</dc:source>
+          <ns4:created>1997</ns4:created>
+          <dc:description>Interieur, detail gewelf kapel noordelijke zijbeuk</dc:description>
+          <dc:description>Diacollectie Huub Kurvers</dc:description>
+          <ns4:isPartOf>Fotocollectie</ns4:isPartOf>
+          <ns4:isPartOf>RCE - Gebouwd</ns4:isPartOf>
+          <ns4:identifier>411.248</ns4:identifier>
+          <ns4:coverage>Monumentnummer: 10305</ns4:coverage>
+          <ns4:references>20377253</ns4:references>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/174d0c9e-6a1a-f2da-edeb-2ee568883185/media/7047de34-29ed-e2a0-e8bd-e864481a4884</ns4:references>
+          <dc:identifier>20377253</dc:identifier>
+          <dc:identifier>411.248</dc:identifier>
+          <ns4:spatial>Kerkplein</ns4:spatial>
+          <ns4:spatial>2</ns4:spatial>
+          <ns4:spatial>Breda</ns4:spatial>
+          <ns4:spatial>4811 XT</ns4:spatial>
+          <ns4:spatial>20377253</ns4:spatial>
+          <ns4:spatial>Adlib priref F&amp;D 20377253</ns4:spatial>
+          <dc:subject>kerken</dc:subject>
+          <dc:subject>gewelven</dc:subject>
+          <dc:subject>gewelven</dc:subject>
+          <dc:subject>kerken</dc:subject>
+          <ns4:relation>7047de34-29ed-e2a0-e8bd-e864481a4884</ns4:relation>
+          <ns4:relation>Adlib priref F&amp;D 20377253</ns4:relation>
+          <dc:rights>http://creativecommons.org/licenses/by-sa/3.0/</dc:rights>
+          <ns4:title>Interieur, detail gewelf kapel noordelijke zijbeuk</ns4:title>
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>837866ec-3f22-11e4-9dc7-3b4bf4a0ed46:97ab3803-6e89-599d-8cd5-a3b74dc2ea68</identifier>
+        <datestamp>2020-10-30T13:27:51Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:photos</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:photos</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:date>1978-06</dc:date>
+          <dc:source>196680</dc:source>
+          <dc:creator>Tangel, L.M. (Loek)</dc:creator>
+          <ns4:created>1978-06</ns4:created>
+          <dc:description>noordelijke dagkant van de doorgang in de oostmuur van de 13de eeuwse toren</dc:description>
+          <ns4:isPartOf>Collectie gebouwd</ns4:isPartOf>
+          <ns4:isPartOf>RCE - Gebouwd</ns4:isPartOf>
+          <ns4:identifier>196.680</ns4:identifier>
+          <ns4:coverage>Monumentnummer: 17255</ns4:coverage>
+          <ns4:references>20083872</ns4:references>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/97ab3803-6e89-599d-8cd5-a3b74dc2ea68/media/46dcbabe-aa20-ca53-cab5-544be5a68de0</ns4:references>
+          <dc:identifier>8499</dc:identifier>
+          <dc:identifier>20083872</dc:identifier>
+          <dc:identifier>196.680</dc:identifier>
+          <ns4:spatial>Hoofdwagt</ns4:spatial>
+          <ns4:spatial>1</ns4:spatial>
+          <ns4:spatial>Grave</ns4:spatial>
+          <ns4:spatial>5361 EW</ns4:spatial>
+          <ns4:spatial>8499</ns4:spatial>
+          <ns4:spatial>20083872</ns4:spatial>
+          <ns4:spatial>systeemkaart, Adlib priref F&amp;D 8499, 20083872</ns4:spatial>
+          <ns4:relation>46dcbabe-aa20-ca53-cab5-544be5a68de0</ns4:relation>
+          <ns4:relation>systeemkaart, Adlib priref F&amp;D 8499, 20083872</ns4:relation>
+          <dc:rights>http://creativecommons.org/licenses/by-sa/3.0/</dc:rights>
+          <ns4:title>noordelijke dagkant van de doorgang in de oostmuur van de 13de eeuwse toren</ns4:title>
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>837866ec-3f22-11e4-9dc7-3b4bf4a0ed46:174e3bbe-3b57-aa24-ea67-28a6d0485173</identifier>
+        <datestamp>2024-08-16T08:49:56Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:photos</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:photos</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:date>1964-12</dc:date>
+          <dc:source>093657</dc:source>
+          <dc:creator>Berends, G. (Gerrit)</dc:creator>
+          <ns4:created>1964-12</ns4:created>
+          <dc:description>Fragment van opgraving</dc:description>
+          <ns4:isPartOf>Collectie gebouwd</ns4:isPartOf>
+          <ns4:isPartOf>RCE - Gebouwd</ns4:isPartOf>
+          <ns4:identifier>93.657</ns4:identifier>
+          <ns4:coverage>Monumentnummer: 515228</ns4:coverage>
+          <ns4:references>20185788</ns4:references>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/174e3bbe-3b57-aa24-ea67-28a6d0485173/media/10831e0d-da23-5c02-a5a4-e37ec8a54c63</ns4:references>
+          <dc:identifier>19423</dc:identifier>
+          <dc:identifier>20185788</dc:identifier>
+          <dc:identifier>515227</dc:identifier>
+          <dc:identifier>93.657</dc:identifier>
+          <ns4:spatial>Landgoed Middachten</ns4:spatial>
+          <ns4:spatial>3</ns4:spatial>
+          <ns4:spatial>De Steeg</ns4:spatial>
+          <ns4:spatial>6994 JC</ns4:spatial>
+          <ns4:spatial>19423</ns4:spatial>
+          <ns4:spatial>20185788</ns4:spatial>
+          <ns4:spatial>systeemkaart, Adlib priref F&amp;D 19423, 20185788</ns4:spatial>
+          <dc:subject>kastelen (versterkte woning)</dc:subject>
+          <dc:subject>opgraving</dc:subject>
+          <dc:subject>buitenplaatsen</dc:subject>
+          <ns4:relation>10831e0d-da23-5c02-a5a4-e37ec8a54c63</ns4:relation>
+          <ns4:relation>systeemkaart, Adlib priref F&amp;D 19423, 20185788</ns4:relation>
+          <dc:rights>http://creativecommons.org/licenses/by-sa/3.0/</dc:rights>
+          <ns4:title>Fragment van opgraving</ns4:title>
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>837866ec-3f22-11e4-9dc7-3b4bf4a0ed46:175e362b-4073-c598-2a2c-eefdcb684975</identifier>
+        <datestamp>2024-08-16T08:49:58Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:photos</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:photos</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:source>084925</dc:source>
+          <dc:creator>Hoogendijk, C.</dc:creator>
+          <dc:description>Voorgevel</dc:description>
+          <ns4:isPartOf>Collectie gebouwd</ns4:isPartOf>
+          <ns4:isPartOf>RCE - Gebouwd</ns4:isPartOf>
+          <ns4:identifier>84.925</ns4:identifier>
+          <ns4:coverage>Monumentnummer: 13310</ns4:coverage>
+          <ns4:references>20060297</ns4:references>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/175e362b-4073-c598-2a2c-eefdcb684975/media/b7955ca9-fb2e-ef07-b12b-c0c0cb093a0e</ns4:references>
+          <dc:identifier>5893</dc:identifier>
+          <dc:identifier>20060297</dc:identifier>
+          <dc:identifier>84.925</dc:identifier>
+          <ns4:spatial>Boomstraat</ns4:spatial>
+          <ns4:spatial>39</ns4:spatial>
+          <ns4:spatial>Dordrecht</ns4:spatial>
+          <ns4:spatial>3300 AA</ns4:spatial>
+          <ns4:spatial>5893</ns4:spatial>
+          <ns4:spatial>20060297</ns4:spatial>
+          <ns4:spatial>systeemkaart, Adlib priref F&amp;D 5893, 20060297</ns4:spatial>
+          <dc:subject>stadspoorten</dc:subject>
+          <ns4:relation>b7955ca9-fb2e-ef07-b12b-c0c0cb093a0e</ns4:relation>
+          <ns4:relation>systeemkaart, Adlib priref F&amp;D 5893, 20060297</ns4:relation>
+          <dc:rights>http://creativecommons.org/licenses/by-sa/3.0/</dc:rights>
+          <ns4:title>Voorgevel</ns4:title>
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>837866ec-3f22-11e4-9dc7-3b4bf4a0ed46:58d95e38-20db-44e6-5329-4982e7b864fa</identifier>
+        <datestamp>2024-08-16T09:50:48Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:photos</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:photos</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:date>2006-09</dc:date>
+          <dc:source>521061</dc:source>
+          <dc:creator>Roderburg, K. (Kris)</dc:creator>
+          <ns4:created>2006-09</ns4:created>
+          <dc:description>IJburgtram bij tramhalte op het traject IJburg</dc:description>
+          <ns4:isPartOf>Fotocollectie</ns4:isPartOf>
+          <ns4:isPartOf>RCE - Gebouwd</ns4:isPartOf>
+          <ns4:identifier>521.061</ns4:identifier>
+          <ns4:references>20390124</ns4:references>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/58d95e38-20db-44e6-5329-4982e7b864fa/media/8e5f1d30-db42-a01f-b5f5-8362d5205ce0</ns4:references>
+          <dc:identifier>20390124</dc:identifier>
+          <dc:identifier>521.061</dc:identifier>
+          <ns4:spatial>Amsterdam</ns4:spatial>
+          <ns4:spatial>20390124</ns4:spatial>
+          <ns4:spatial>Adlib priref F&amp;D 20390124</ns4:spatial>
+          <dc:subject>IJburg</dc:subject>
+          <dc:subject>bruggen</dc:subject>
+          <dc:subject>Tram</dc:subject>
+          <dc:subject>bruggen</dc:subject>
+          <ns4:relation>8e5f1d30-db42-a01f-b5f5-8362d5205ce0</ns4:relation>
+          <ns4:relation>Adlib priref F&amp;D 20390124</ns4:relation>
+          <dc:rights>http://creativecommons.org/licenses/by-sa/3.0/</dc:rights>
+          <ns4:title>IJburgtram bij tramhalte op het traject IJburg</ns4:title>
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>837866ec-3f22-11e4-9dc7-3b4bf4a0ed46:175f988b-a567-99da-ba64-50743067fac4</identifier>
+        <datestamp>2024-08-16T08:49:58Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:photos</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:photos</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:date>2005-02</dc:date>
+          <dc:source>509174</dc:source>
+          <dc:creator>Technau, Sergé</dc:creator>
+          <ns4:created>2005-02</ns4:created>
+          <dc:description>Voorhuis, overzicht achtergevel</dc:description>
+          <ns4:isPartOf>Fotocollectie</ns4:isPartOf>
+          <ns4:isPartOf>RCE - Gebouwd</ns4:isPartOf>
+          <ns4:identifier>509.174</ns4:identifier>
+          <ns4:coverage>Monumentnummer: 35916</ns4:coverage>
+          <ns4:references>20364463</ns4:references>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/175f988b-a567-99da-ba64-50743067fac4/media/797d612c-4043-b4af-5c63-0f9e3b4ea5a4</ns4:references>
+          <dc:identifier>20364463</dc:identifier>
+          <dc:identifier>529402</dc:identifier>
+          <dc:identifier>509.174</dc:identifier>
+          <ns4:spatial>Streeksterweg</ns4:spatial>
+          <ns4:spatial>79</ns4:spatial>
+          <ns4:spatial>Usquert</ns4:spatial>
+          <ns4:spatial>9988 RB</ns4:spatial>
+          <ns4:spatial>20364463</ns4:spatial>
+          <ns4:spatial>Adlib priref F&amp;D 20364463</ns4:spatial>
+          <dc:subject>boerderijen</dc:subject>
+          <dc:subject>boerderijen</dc:subject>
+          <ns4:relation>797d612c-4043-b4af-5c63-0f9e3b4ea5a4</ns4:relation>
+          <ns4:relation>Adlib priref F&amp;D 20364463</ns4:relation>
+          <dc:rights>http://creativecommons.org/licenses/by-sa/3.0/</dc:rights>
+          <ns4:title>Voorhuis, overzicht achtergevel</ns4:title>
+        </ns2:dc>
+      </metadata>
+    </record>
+    </ListRecords>
+</OAI-PMH>

@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='utf-8'?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:ns4="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+  <responseDate>2026-11-13T18:31:17Z</responseDate>
+  <request>https://example.org/oai</request>
+  <ListRecords>
+    <record>
+      <header>
+        <identifier>9eeef8e9-c598-d626-06d1-84d29bb3c2e6:e871b812-94d7-11e5-b258-5f1f99de3f2f</identifier>
+        <datestamp>2026-02-02T11:59:58Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:oat</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:oat</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:source>OAT08038C000</dc:source>
+          <ns4:isPartOf>Oorspronkelijke aanwijzende tafels (OAT)</ns4:isPartOf>
+          <ns4:isPartOf>Kadastrale kaarten 1811-1832</ns4:isPartOf>
+          <ns4:isPartOf>C</ns4:isPartOf>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/e871b812-94d7-11e5-b258-5f1f99de3f2f/media/4f1285c9-e366-f034-497d-a107da7e18e4</ns4:references>
+          <dc:identifier>OAT08038C000</dc:identifier>
+          <dc:identifier>OAT08038C000</dc:identifier>
+          <ns4:spatial>Dubbeldam</ns4:spatial>
+          <ns4:spatial>Nederland</ns4:spatial>
+          <ns4:spatial>08038</ns4:spatial>
+          <ns4:spatial>Zuid-Holland</ns4:spatial>
+          <ns4:spatial />
+          <dc:subject>Oorspronkelijke aanwijzende tafel (OAT)</dc:subject>
+          <dc:subject>Oorspronkelijke aanwijzende tafel (OAT)</dc:subject>
+          <ns4:relation />
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>9eeef8e9-c598-d626-06d1-84d29bb3c2e6:e871c424-94d7-11e5-b25a-239cfd3655f0</identifier>
+        <datestamp>2026-02-02T11:59:58Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:oat</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:oat</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:source>OAT08038C004</dc:source>
+          <ns4:isPartOf>Oorspronkelijke aanwijzende tafels (OAT)</ns4:isPartOf>
+          <ns4:isPartOf>Kadastrale kaarten 1811-1832</ns4:isPartOf>
+          <ns4:isPartOf>C</ns4:isPartOf>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/e871c424-94d7-11e5-b25a-239cfd3655f0/media/bcb875b5-dc8a-8615-dd9b-8981fa942473</ns4:references>
+          <dc:identifier>OAT08038C004</dc:identifier>
+          <dc:identifier>OAT08038C004</dc:identifier>
+          <ns4:spatial>Dubbeldam</ns4:spatial>
+          <ns4:spatial>Nederland</ns4:spatial>
+          <ns4:spatial>08038</ns4:spatial>
+          <ns4:spatial>Zuid-Holland</ns4:spatial>
+          <ns4:spatial />
+          <dc:subject>Oorspronkelijke aanwijzende tafel (OAT)</dc:subject>
+          <dc:subject>Oorspronkelijke aanwijzende tafel (OAT)</dc:subject>
+          <ns4:relation />
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>9eeef8e9-c598-d626-06d1-84d29bb3c2e6:e871c622-94d7-11e5-b25c-9b060ec521c1</identifier>
+        <datestamp>2026-02-02T11:59:58Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:oat</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:oat</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:source>OAT08038CZ01</dc:source>
+          <ns4:isPartOf>Oorspronkelijke aanwijzende tafels (OAT)</ns4:isPartOf>
+          <ns4:isPartOf>Kadastrale kaarten 1811-1832</ns4:isPartOf>
+          <ns4:isPartOf>C</ns4:isPartOf>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/e871c622-94d7-11e5-b25c-9b060ec521c1/media/00dd05fa-e6da-263a-39e4-658bfd2ba7a0</ns4:references>
+          <dc:identifier>OAT08038CZ01</dc:identifier>
+          <dc:identifier>OAT08038CZ01</dc:identifier>
+          <ns4:spatial>Dubbeldam</ns4:spatial>
+          <ns4:spatial>Nederland</ns4:spatial>
+          <ns4:spatial>08038</ns4:spatial>
+          <ns4:spatial>Zuid-Holland</ns4:spatial>
+          <ns4:spatial />
+          <dc:subject>Oorspronkelijke aanwijzende tafel (OAT)</dc:subject>
+          <dc:subject>Oorspronkelijke aanwijzende tafel (OAT)</dc:subject>
+          <ns4:relation />
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>9eeef8e9-c598-d626-06d1-84d29bb3c2e6:e871cde8-94d7-11e5-b25e-f76e926c620d</identifier>
+        <datestamp>2026-02-02T11:59:58Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:oat</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:oat</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:source>OAT08038C010</dc:source>
+          <ns4:isPartOf>Oorspronkelijke aanwijzende tafels (OAT)</ns4:isPartOf>
+          <ns4:isPartOf>Kadastrale kaarten 1811-1832</ns4:isPartOf>
+          <ns4:isPartOf>C</ns4:isPartOf>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/e871cde8-94d7-11e5-b25e-f76e926c620d/media/4f552bd9-e5d0-5d31-d8fc-8fe965ce7542</ns4:references>
+          <dc:identifier>OAT08038C010</dc:identifier>
+          <dc:identifier>OAT08038C010</dc:identifier>
+          <ns4:spatial>Dubbeldam</ns4:spatial>
+          <ns4:spatial>Nederland</ns4:spatial>
+          <ns4:spatial>08038</ns4:spatial>
+          <ns4:spatial>Zuid-Holland</ns4:spatial>
+          <ns4:spatial />
+          <dc:subject>Oorspronkelijke aanwijzende tafel (OAT)</dc:subject>
+          <dc:subject>Oorspronkelijke aanwijzende tafel (OAT)</dc:subject>
+          <ns4:relation />
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>9eeef8e9-c598-d626-06d1-84d29bb3c2e6:e871cfdc-94d7-11e5-b260-aff5ab90d1ee</identifier>
+        <datestamp>2026-02-02T11:59:58Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:oat</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:oat</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:source>OAT08038C008</dc:source>
+          <ns4:isPartOf>Oorspronkelijke aanwijzende tafels (OAT)</ns4:isPartOf>
+          <ns4:isPartOf>Kadastrale kaarten 1811-1832</ns4:isPartOf>
+          <ns4:isPartOf>C</ns4:isPartOf>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/e871cfdc-94d7-11e5-b260-aff5ab90d1ee/media/df55d7d0-67ee-7917-7317-dd1f8aa22566</ns4:references>
+          <dc:identifier>OAT08038C008</dc:identifier>
+          <dc:identifier>OAT08038C008</dc:identifier>
+          <ns4:spatial>Dubbeldam</ns4:spatial>
+          <ns4:spatial>Nederland</ns4:spatial>
+          <ns4:spatial>08038</ns4:spatial>
+          <ns4:spatial>Zuid-Holland</ns4:spatial>
+          <ns4:spatial />
+          <dc:subject>Oorspronkelijke aanwijzende tafel (OAT)</dc:subject>
+          <dc:subject>Oorspronkelijke aanwijzende tafel (OAT)</dc:subject>
+          <ns4:relation />
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>9eeef8e9-c598-d626-06d1-84d29bb3c2e6:e871d19e-94d7-11e5-b262-0bbb6f349efa</identifier>
+        <datestamp>2026-02-02T11:59:58Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:oat</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:oat</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:source>OAT08038C014</dc:source>
+          <ns4:isPartOf>Oorspronkelijke aanwijzende tafels (OAT)</ns4:isPartOf>
+          <ns4:isPartOf>Kadastrale kaarten 1811-1832</ns4:isPartOf>
+          <ns4:isPartOf>C</ns4:isPartOf>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/e871d19e-94d7-11e5-b262-0bbb6f349efa/media/8db28f1e-7851-a20d-6ee6-4a8f2a138da4</ns4:references>
+          <dc:identifier>OAT08038C014</dc:identifier>
+          <dc:identifier>OAT08038C014</dc:identifier>
+          <ns4:spatial>Dubbeldam</ns4:spatial>
+          <ns4:spatial>Nederland</ns4:spatial>
+          <ns4:spatial>08038</ns4:spatial>
+          <ns4:spatial>Zuid-Holland</ns4:spatial>
+          <ns4:spatial />
+          <dc:subject>Oorspronkelijke aanwijzende tafel (OAT)</dc:subject>
+          <dc:subject>Oorspronkelijke aanwijzende tafel (OAT)</dc:subject>
+          <ns4:relation />
+        </ns2:dc>
+      </metadata>
+    </record>
+    </ListRecords>
+</OAI-PMH>

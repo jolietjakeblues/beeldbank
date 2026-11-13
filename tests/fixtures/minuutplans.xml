@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='utf-8'?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:ns4="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+  <responseDate>2026-11-13T18:31:16Z</responseDate>
+  <request>https://example.org/oai</request>
+  <ListRecords>
+    <record>
+      <header>
+        <identifier>a95208f1-7ea1-fb93-ba0b-a6f7cdcd2e4c:05fbf886-e905-db8d-7ee4-6f8b3af3639d</identifier>
+        <datestamp>2026-02-02T11:53:45Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:minuutplans</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:minuutplans</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:source>MIN06060A02</dc:source>
+          <ns4:isPartOf>Minuutplans</ns4:isPartOf>
+          <ns4:isPartOf>Kadastrale kaarten 1811-1832</ns4:isPartOf>
+          <ns4:isPartOf>A</ns4:isPartOf>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/05fbf886-e905-db8d-7ee4-6f8b3af3639d/media/b9f951cb-2825-def2-fffe-ee6b28a891c5</ns4:references>
+          <dc:identifier>MIN06060A02</dc:identifier>
+          <dc:identifier>MIN06060A02</dc:identifier>
+          <ns4:spatial>Renswoude</ns4:spatial>
+          <ns4:spatial>Nederland</ns4:spatial>
+          <ns4:spatial>06060</ns4:spatial>
+          <ns4:spatial>Utrecht</ns4:spatial>
+          <ns4:spatial />
+          <dc:subject>minuutplan</dc:subject>
+          <dc:subject>minuutplan</dc:subject>
+          <ns4:relation />
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>a95208f1-7ea1-fb93-ba0b-a6f7cdcd2e4c:2024a0ab-753d-234f-e10e-1bd78e599449</identifier>
+        <datestamp>2026-02-02T11:53:45Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:minuutplans</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:minuutplans</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:source>MIN01057A05</dc:source>
+          <ns4:isPartOf>Minuutplans</ns4:isPartOf>
+          <ns4:isPartOf>Kadastrale kaarten 1811-1832</ns4:isPartOf>
+          <ns4:isPartOf>A</ns4:isPartOf>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/2024a0ab-753d-234f-e10e-1bd78e599449/media/080fd322-29a6-6b50-2e92-7069479fe804</ns4:references>
+          <dc:identifier>MIN01057A05</dc:identifier>
+          <dc:identifier>MIN01057A05</dc:identifier>
+          <ns4:spatial>'t Zandt</ns4:spatial>
+          <ns4:spatial>Nederland</ns4:spatial>
+          <ns4:spatial>01057</ns4:spatial>
+          <ns4:spatial>Groningen</ns4:spatial>
+          <ns4:spatial />
+          <ns4:relation />
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>a95208f1-7ea1-fb93-ba0b-a6f7cdcd2e4c:49d6569f-4772-cc26-befc-29484fe44d5b</identifier>
+        <datestamp>2026-02-02T11:53:45Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:minuutplans</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:minuutplans</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:source>MIN02104A05</dc:source>
+          <ns4:isPartOf>Minuutplans</ns4:isPartOf>
+          <ns4:isPartOf>Kadastrale kaarten 1811-1832</ns4:isPartOf>
+          <ns4:isPartOf>A</ns4:isPartOf>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/49d6569f-4772-cc26-befc-29484fe44d5b/media/e14d7565-60b8-4a5f-2de6-d3803e1cf7ad</ns4:references>
+          <dc:identifier>MIN02104A05</dc:identifier>
+          <dc:identifier>MIN02104A05</dc:identifier>
+          <ns4:spatial>Workum</ns4:spatial>
+          <ns4:spatial>Nederland</ns4:spatial>
+          <ns4:spatial>02104</ns4:spatial>
+          <ns4:spatial>Friesland</ns4:spatial>
+          <ns4:spatial />
+          <ns4:relation />
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>a95208f1-7ea1-fb93-ba0b-a6f7cdcd2e4c:4dbab6cd-44c4-1dcb-492d-2c0b02a5fafd</identifier>
+        <datestamp>2026-02-02T11:53:45Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:minuutplans</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:minuutplans</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:source>MIN10007F03</dc:source>
+          <ns4:isPartOf>Minuutplans</ns4:isPartOf>
+          <ns4:isPartOf>Kadastrale kaarten 1811-1832</ns4:isPartOf>
+          <ns4:isPartOf>F</ns4:isPartOf>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/4dbab6cd-44c4-1dcb-492d-2c0b02a5fafd/media/d11cd014-a7e6-ddae-869b-07f2031a23f3</ns4:references>
+          <dc:identifier>MIN10007F03</dc:identifier>
+          <dc:identifier>MIN10007F03</dc:identifier>
+          <ns4:spatial>Asten</ns4:spatial>
+          <ns4:spatial>Nederland</ns4:spatial>
+          <ns4:spatial>10007</ns4:spatial>
+          <ns4:spatial>Noord-Brabant</ns4:spatial>
+          <ns4:spatial />
+          <dc:subject>minuutplan</dc:subject>
+          <dc:subject>minuutplan</dc:subject>
+          <ns4:relation />
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>a95208f1-7ea1-fb93-ba0b-a6f7cdcd2e4c:62f3a86f-3590-22e9-5d76-5b700bd27750</identifier>
+        <datestamp>2026-02-02T11:53:45Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:minuutplans</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:minuutplans</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:source>MIN10029C03</dc:source>
+          <ns4:isPartOf>Minuutplans</ns4:isPartOf>
+          <ns4:isPartOf>Kadastrale kaarten 1811-1832</ns4:isPartOf>
+          <ns4:isPartOf>C</ns4:isPartOf>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/62f3a86f-3590-22e9-5d76-5b700bd27750/media/cd86d75a-344e-b081-9c3a-814c077ef285</ns4:references>
+          <dc:identifier>MIN10029C03</dc:identifier>
+          <dc:identifier>MIN10029C03</dc:identifier>
+          <ns4:spatial>Capelle</ns4:spatial>
+          <ns4:spatial>Nederland</ns4:spatial>
+          <ns4:spatial>10029</ns4:spatial>
+          <ns4:spatial>Noord-Brabant</ns4:spatial>
+          <ns4:spatial />
+          <ns4:relation />
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>a95208f1-7ea1-fb93-ba0b-a6f7cdcd2e4c:a70b9096-94d7-11e5-b554-c7293f50d75d</identifier>
+        <datestamp>2026-02-02T11:53:45Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:minuutplans</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:minuutplans</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:source>MIN01001A01</dc:source>
+          <ns4:isPartOf>Minuutplans</ns4:isPartOf>
+          <ns4:isPartOf>Kadastrale kaarten 1811-1832</ns4:isPartOf>
+          <ns4:isPartOf>A</ns4:isPartOf>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/a70b9096-94d7-11e5-b554-c7293f50d75d/media/f04c5833-bfe4-ccc9-5ad8-a9f004e55801</ns4:references>
+          <dc:identifier>MIN01001A01</dc:identifier>
+          <dc:identifier>MIN01001A01</dc:identifier>
+          <ns4:spatial>Adorp</ns4:spatial>
+          <ns4:spatial>Nederland</ns4:spatial>
+          <ns4:spatial>01001</ns4:spatial>
+          <ns4:spatial>Groningen</ns4:spatial>
+          <ns4:spatial />
+          <dc:subject>minuutplan</dc:subject>
+          <dc:subject>minuutplan</dc:subject>
+          <ns4:relation />
+        </ns2:dc>
+      </metadata>
+    </record>
+    </ListRecords>
+</OAI-PMH>

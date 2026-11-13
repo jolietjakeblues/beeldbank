@@ -1,0 +1,74 @@
+### Linked Data ###
+# base uri voor linked data, nodes worden op basis van deze uri opgebouwd:
+#   {BASE_URI}{COLLECTION_ID}/id/{klasse}/{uuid}
+BASE_URI: 'https://linkeddata.cultureelerfgoed.nl/'
+COLLECTION_ID: 'rce/beeldbank'
+# uri van de dataset zelf (schema:isPartOf van elk record)
+DATASET_URI: 'https://linkeddata.cultureelerfgoed.nl/rce/beeldbank/'
+DATASET_NAME: 'Beeldbank RCE'
+DATASET_DESCRIPTION: 'Foto''s, bouwtekeningen, prenten en oude tekeningen, kadastrale minuutplans, aanwijzende tafels en verzamelplans uit de Beeldbank van de Rijksdienst voor het Cultureel Erfgoed.'
+
+# Licentie van de metadata (IRI) op datasetniveau. Leeg = niet opnemen. De licentie van het beeld staat per record
+# (dc:rights in de bron, schema:license in de data).
+LICENSE_URI: ''
+
+### OAI-PMH (Memorix) ###
+# {MEMORIX_OAI_KEY} wordt uit de omgeving ingevuld. De sleutel hoort in een secret, niet in dit bestand.
+SRC_URI: 'https://maior.memorix.nl/api/oai/rce/key/{MEMORIX_OAI_KEY}/'
+SRC_PREFIX: 'oai_dc'
+# pauze tussen OAI-pagina's (seconden); de bron levert 200 records per pagina
+SRC_SLEEP: 0.1
+SRC_RETRIES: 5
+SRC_BACKOFF: 2.0
+
+# Links naar de beeldbank en het beeld.
+#   {record} is het uuid van het record, {media} het uuid van het beeld
+BEELDBANK_URL: 'https://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/{record}/media/{media}'
+IMAGE_URL: 'https://images.memorix.nl/rce/thumb/fullsize/{media}.jpg'
+THUMBNAIL_URL: 'https://images.memorix.nl/rce/thumb/350x350/{media}.jpg'
+
+# Rijksmonument waar "Monumentnummer: N" naar verwijst (alleen de IRI, zonder eigen beschrijving).
+MONUMENT_URI: 'https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/rijksmonument/{number}'
+
+# Bronnen. Elke bron is een OAI-set; kind bepaalt het schema.org-type en de verwerking van de plaatsgegevens:
+#   photo     schema:Photograph       (adres van het afgebeelde object)
+#   drawing   schema:VisualArtwork    (adres of plaats)
+#   print     schema:VisualArtwork    (adres of plaats)
+#   map       schema:Map              (plaats, land, kadastrale gemeentecode, provincie)
+#   table     schema:CreativeWork     (idem)
+# Alleen de foto's worden geoogst. De andere sets van tenant:rce zijn uitgeschakeld (code, shapes en tests ondersteunen ze
+# wel): haal de # weg om er een aan te zetten en voeg de naam toe aan de matrix in .github/workflows/harvest_beeldbank.yml.
+#   Omvang volgens de OAI op 13 november 2026: oat 143.317, architectural_drawings 45.820, minuutplans 15.686,
+#   old_prints_and_drawings 5.234, verzamelplans 1.295.
+SOURCES:
+  photos:
+    kind: 'photo'
+    set: 'tenant:rce:search_s_entity_type:photos'
+  # architectural_drawings:
+  #   kind: 'drawing'
+  #   set: 'tenant:rce:search_s_entity_type:architectural_drawings'
+  # old_prints_and_drawings:
+  #   kind: 'print'
+  #   set: 'tenant:rce:search_s_entity_type:old_prints_and_drawings'
+  # minuutplans:
+  #   kind: 'map'
+  #   set: 'tenant:rce:search_s_entity_type:minuutplans'
+  # verzamelplans:
+  #   kind: 'map'
+  #   set: 'tenant:rce:search_s_entity_type:verzamelplans'
+  # oat:
+  #   kind: 'table'
+  #   set: 'tenant:rce:search_s_entity_type:oat'
+
+### Kwaliteitsbewaking ###
+# aantal records dat bij de transformatie mag falen voordat de run als mislukt geldt (0 = geen enkel)
+MAX_RECORD_ERRORS: 0
+
+### Organisatie ###
+ORG_URI: 'https://www.cultureelerfgoed.nl/'
+ORG_NAME: 'Rijksdienst voor het Cultureel Erfgoed'
+ORG_SAME_AS: 'https://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed'
+ORG_CONTACT_NAME: 'Infodesk van de RCE'
+ORG_CONTACT_EMAIL: 'thesauri@cultureelerfgoed.nl'
+ORG_ISIL: 'NL-AmfRCE'
+ORG_ALTNAME: 'Cultural Heritage Agency of the Netherlands'

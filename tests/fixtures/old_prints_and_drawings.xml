@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='utf-8'?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:ns4="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+  <responseDate>2026-11-13T18:31:15Z</responseDate>
+  <request>https://example.org/oai</request>
+  <ListRecords>
+    <record>
+      <header>
+        <identifier>d51a06d2-3f21-11e4-b1ff-bf3e05fa9f9f:051b77c2-05ab-4588-8916-c677a433c221</identifier>
+        <datestamp>2025-06-16T16:57:18Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:old_prints_and_drawings</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:old_prints_and_drawings</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:date>1920</dc:date>
+          <dc:source>283694</dc:source>
+          <dc:creator>W., J.</dc:creator>
+          <ns4:created>1920</ns4:created>
+          <dc:description>opstand voorgevel</dc:description>
+          <ns4:isPartOf>Collectie Prenten en oude tekeningen</ns4:isPartOf>
+          <ns4:isPartOf>RCE - Gebouwd</ns4:isPartOf>
+          <dc:title>Hoofdgevel St. Pieterskerk te leiden: 'Noord-Transept'</dc:title>
+          <ns4:identifier>VE-399</ns4:identifier>
+          <ns4:coverage>Monumentnummer: 25446</ns4:coverage>
+          <ns4:references>40002080</ns4:references>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/051b77c2-05ab-4588-8916-c677a433c221/media/e94f5f29-2e4d-a084-c87d-68796de232aa</ns4:references>
+          <dc:identifier>40002080</dc:identifier>
+          <dc:identifier>VE-399</dc:identifier>
+          <ns4:spatial>Pieterskerkhof</ns4:spatial>
+          <ns4:spatial>1</ns4:spatial>
+          <ns4:spatial>Leiden</ns4:spatial>
+          <ns4:spatial>2311 SP</ns4:spatial>
+          <ns4:spatial>40002080</ns4:spatial>
+          <ns4:spatial>Adlib priref POT 40002080</ns4:spatial>
+          <ns4:relation>e94f5f29-2e4d-a084-c87d-68796de232aa</ns4:relation>
+          <ns4:relation>Adlib priref POT 40002080</ns4:relation>
+          <ns4:rightsHolder>http://creativecommons.org/licenses/by-sa/3.0/</ns4:rightsHolder>
+          <ns4:title>Hoofdgevel St. Pieterskerk te leiden: 'Noord-Transept'</ns4:title>
+          <ns4:title>opstand voorgevel</ns4:title>
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>d51a06d2-3f21-11e4-b1ff-bf3e05fa9f9f:abbe6cb3-06ca-45bb-66ac-367410e6b46c</identifier>
+        <datestamp>2025-10-20T19:03:16Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:old_prints_and_drawings</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:old_prints_and_drawings</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:date>1938-10-28</dc:date>
+          <dc:source>SI-007</dc:source>
+          <dc:creator>Sikemeier, J.H.</dc:creator>
+          <ns4:created>1938-10-28</ns4:created>
+          <dc:description>Gezicht op de Gasthuistoren vanuit het zuidwesten</dc:description>
+          <ns4:isPartOf>Topografische tekeningen</ns4:isPartOf>
+          <ns4:isPartOf>RCE - Gebouwd</ns4:isPartOf>
+          <dc:title>Gasthuistoren Zaltbommel</dc:title>
+          <ns4:identifier>SI-007</ns4:identifier>
+          <ns4:coverage>Monumentnummer: 40252</ns4:coverage>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/abbe6cb3-06ca-45bb-66ac-367410e6b46c/media/4c2f6f40-9975-92ef-6550-59b4260aa08c</ns4:references>
+          <dc:identifier>0622487968</dc:identifier>
+          <dc:identifier>SI-007</dc:identifier>
+          <ns4:spatial>Oude Vischmarkt</ns4:spatial>
+          <ns4:spatial>1</ns4:spatial>
+          <ns4:spatial>Zaltbommel</ns4:spatial>
+          <ns4:spatial>5301 CZ</ns4:spatial>
+          <ns4:spatial>0622487968</ns4:spatial>
+          <ns4:spatial>0622487968</ns4:spatial>
+          <dc:subject>torens</dc:subject>
+          <dc:subject>torens (bouwwerk)</dc:subject>
+          <ns4:relation>0622487968</ns4:relation>
+          <ns4:title>Gasthuistoren Zaltbommel</ns4:title>
+          <ns4:title>Gezicht op de Gasthuistoren vanuit het zuidwesten</ns4:title>
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>d51a06d2-3f21-11e4-b1ff-bf3e05fa9f9f:0761cae7-1404-c547-3003-07c8580ea0c6</identifier>
+        <datestamp>2025-11-17T13:03:00Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:old_prints_and_drawings</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:old_prints_and_drawings</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:source>S-13331</dc:source>
+          <dc:description>Interieur, Oud Stadhouderlijk Kwartier, tekening van houten beschilderde plafonddelen in voormalige Rode Galerij, "beschilderd met ornament goud op rooden grond"</dc:description>
+          <ns4:isPartOf>Collectie Prenten en oude tekeningen</ns4:isPartOf>
+          <ns4:isPartOf>RCE - Gebouwd</ns4:isPartOf>
+          <ns4:identifier>S-13331</ns4:identifier>
+          <ns4:coverage>Monumentnummer: 17478</ns4:coverage>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/0761cae7-1404-c547-3003-07c8580ea0c6/media/054618a2-6645-3b23-b4e5-7364273471b8</ns4:references>
+          <dc:identifier>S-13331</dc:identifier>
+          <ns4:spatial>Binnenhof</ns4:spatial>
+          <ns4:spatial>22</ns4:spatial>
+          <ns4:spatial>'s-Gravenhage</ns4:spatial>
+          <ns4:spatial>2513 AA</ns4:spatial>
+          <ns4:spatial />
+          <dc:subject>regeringsgebouwen</dc:subject>
+          <dc:subject>parlementsgebouwen</dc:subject>
+          <dc:subject>plafonds</dc:subject>
+          <dc:subject>tekeningen</dc:subject>
+          <dc:subject>schilderingen</dc:subject>
+          <dc:subject>verguldingen</dc:subject>
+          <dc:subject>cassettenplafonds</dc:subject>
+          <dc:subject>galerijen (wandelgang)</dc:subject>
+          <ns4:relation />
+          <ns4:title>Interieur, Oud Stadhouderlijk Kwartier, tekening van houten beschilderde plafonddelen in voormalige Rode Galerij, "beschilderd met ornament goud op rooden grond"</ns4:title>
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>d51a06d2-3f21-11e4-b1ff-bf3e05fa9f9f:0d29221c-a4e9-5517-c17e-4e91673d679b</identifier>
+        <datestamp>2025-11-17T13:03:00Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:old_prints_and_drawings</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:old_prints_and_drawings</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:source>S-13335</dc:source>
+          <dc:description>Interieur, Kabinet Mary Stuart I in Oud Stadhouderlijk Kwartier (tegenwoordig Eerste Kamer), tekening van beschilderd plafond, "Beschilderd welfsel in de Voorzaal B"</dc:description>
+          <ns4:isPartOf>Collectie Prenten en oude tekeningen</ns4:isPartOf>
+          <ns4:isPartOf>RCE - Gebouwd</ns4:isPartOf>
+          <ns4:identifier>S-13335</ns4:identifier>
+          <ns4:coverage>Monumentnummer: 17478</ns4:coverage>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/0d29221c-a4e9-5517-c17e-4e91673d679b/media/f059a948-a16b-0ac2-413e-1302551c7442</ns4:references>
+          <dc:identifier>S-13335</dc:identifier>
+          <ns4:spatial>Binnenhof</ns4:spatial>
+          <ns4:spatial>22</ns4:spatial>
+          <ns4:spatial>'s-Gravenhage</ns4:spatial>
+          <ns4:spatial>2513 AA</ns4:spatial>
+          <ns4:spatial />
+          <dc:subject>regeringsgebouwen</dc:subject>
+          <dc:subject>parlementsgebouwen</dc:subject>
+          <dc:subject>plafonds</dc:subject>
+          <dc:subject>tekeningen</dc:subject>
+          <dc:subject>koepelgewelven</dc:subject>
+          <dc:subject>schilderingen</dc:subject>
+          <ns4:relation />
+          <ns4:title>Interieur, Kabinet Mary Stuart I in Oud Stadhouderlijk Kwartier (tegenwoordig Eerste Kamer), tekening van beschilderd plafond, "Beschilderd welfsel in de Voorzaal B"</ns4:title>
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>d51a06d2-3f21-11e4-b1ff-bf3e05fa9f9f:4697a1fd-7763-a0eb-2a7b-2d84de040dad</identifier>
+        <datestamp>2025-11-17T13:03:00Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:old_prints_and_drawings</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:old_prints_and_drawings</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:source>S-13337</dc:source>
+          <dc:description>Interieur, Oud Stadhouderlijk Kwartier, plattegrond van gewelfde bezoldering in één van de bovenvertrekken aan de zijde van het Buitenhof</dc:description>
+          <dc:description>Opmerking "voor Amsterdam", waarschijnlijk doelend op het Rijksmuseum aldaar</dc:description>
+          <ns4:isPartOf>Collectie Prenten en oude tekeningen</ns4:isPartOf>
+          <ns4:isPartOf>RCE - Gebouwd</ns4:isPartOf>
+          <ns4:identifier>S-13337</ns4:identifier>
+          <ns4:coverage>Monumentnummer: 17471</ns4:coverage>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/4697a1fd-7763-a0eb-2a7b-2d84de040dad/media/fc10eff6-8890-3ca4-e5a9-58aeebcc19ea</ns4:references>
+          <dc:identifier>S-13337</dc:identifier>
+          <ns4:spatial>Binnenhof</ns4:spatial>
+          <ns4:spatial>1</ns4:spatial>
+          <ns4:spatial>'s-Gravenhage</ns4:spatial>
+          <ns4:spatial>2513 AA</ns4:spatial>
+          <ns4:spatial />
+          <dc:subject>regeringsgebouwen</dc:subject>
+          <dc:subject>parlementsgebouwen</dc:subject>
+          <dc:subject>plafonds</dc:subject>
+          <dc:subject>schilderingen</dc:subject>
+          <dc:subject>koepelgewelven</dc:subject>
+          <dc:subject>gewelven</dc:subject>
+          <dc:subject>plattegronden</dc:subject>
+          <dc:subject>tekeningen</dc:subject>
+          <dc:subject>zolderingen</dc:subject>
+          <ns4:relation />
+          <ns4:title>Interieur, Oud Stadhouderlijk Kwartier, plattegrond van gewelfde bezoldering in één van de bovenvertrekken aan de zijde van het Buitenhof</ns4:title>
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>d51a06d2-3f21-11e4-b1ff-bf3e05fa9f9f:7ef55943-b5d6-8d94-82da-6161f689f2cd</identifier>
+        <datestamp>2025-11-17T13:03:00Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:old_prints_and_drawings</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:old_prints_and_drawings</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:source>S-13336</dc:source>
+          <dc:description>Interieur, Kabinet Mary Stuart I in Oud Stadhouderlijk Kwartier (tegenwoordig Eerste Kamer), tekening van plafond met koepelgewelf, "Platte grond houten welfsel Voorzaal"</dc:description>
+          <dc:description>Opmerking "blijft in den haag"</dc:description>
+          <ns4:isPartOf>Collectie Prenten en oude tekeningen</ns4:isPartOf>
+          <ns4:isPartOf>RCE - Gebouwd</ns4:isPartOf>
+          <ns4:identifier>S-13336</ns4:identifier>
+          <ns4:coverage>Monumentnummer: 17478</ns4:coverage>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/7ef55943-b5d6-8d94-82da-6161f689f2cd/media/6be5ea61-0b16-1e50-93ea-e4de27280708</ns4:references>
+          <dc:identifier>S-13336</dc:identifier>
+          <ns4:spatial>Binnenhof</ns4:spatial>
+          <ns4:spatial>22</ns4:spatial>
+          <ns4:spatial>'s-Gravenhage</ns4:spatial>
+          <ns4:spatial>2513 AA</ns4:spatial>
+          <ns4:spatial />
+          <dc:subject>regeringsgebouwen</dc:subject>
+          <dc:subject>parlementsgebouwen</dc:subject>
+          <dc:subject>tekeningen</dc:subject>
+          <dc:subject>plafonds</dc:subject>
+          <dc:subject>koepelgewelven</dc:subject>
+          <ns4:relation />
+          <ns4:title>Interieur, Kabinet Mary Stuart I in Oud Stadhouderlijk Kwartier (tegenwoordig Eerste Kamer), tekening van plafond met koepelgewelf, "Platte grond houten welfsel Voorzaal"</ns4:title>
+        </ns2:dc>
+      </metadata>
+    </record>
+    </ListRecords>
+</OAI-PMH>

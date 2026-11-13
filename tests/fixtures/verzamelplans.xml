@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='utf-8'?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:ns4="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+  <responseDate>2026-11-13T18:31:16Z</responseDate>
+  <request>https://example.org/oai</request>
+  <ListRecords>
+    <record>
+      <header>
+        <identifier>ead58e40-3861-f0f1-b949-8c102a878900:99525be2-94d7-11e5-a7e6-03ef3f9ca01d</identifier>
+        <datestamp>2026-02-02T11:57:13Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:verzamelplans</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:verzamelplans</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:source>MIN01001VK1</dc:source>
+          <ns4:isPartOf>Verzamelplans</ns4:isPartOf>
+          <ns4:isPartOf>Kadastrale kaarten 1811-1832</ns4:isPartOf>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/99525be2-94d7-11e5-a7e6-03ef3f9ca01d/media/e1d14b4d-403a-3e16-23f3-c6f8b38e87c5</ns4:references>
+          <dc:identifier>MIN01001VK1</dc:identifier>
+          <dc:identifier>MIN01001VK1</dc:identifier>
+          <ns4:spatial>Adorp</ns4:spatial>
+          <ns4:spatial>Nederland</ns4:spatial>
+          <ns4:spatial>01001</ns4:spatial>
+          <ns4:spatial>Groningen</ns4:spatial>
+          <ns4:spatial />
+          <dc:subject>verzamelplan</dc:subject>
+          <dc:subject>verzamelplan</dc:subject>
+          <ns4:relation />
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>ead58e40-3861-f0f1-b949-8c102a878900:99594178-94d7-11e5-a7e7-7fda4bc27734</identifier>
+        <datestamp>2026-02-02T11:57:13Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:verzamelplans</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:verzamelplans</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:source>MIN01002VK1</dc:source>
+          <ns4:isPartOf>Verzamelplans</ns4:isPartOf>
+          <ns4:isPartOf>Kadastrale kaarten 1811-1832</ns4:isPartOf>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/99594178-94d7-11e5-a7e7-7fda4bc27734/media/a33edebf-3a71-d0cb-35d4-b4f97e081098</ns4:references>
+          <dc:identifier>MIN01002VK1</dc:identifier>
+          <dc:identifier>MIN01002VK1</dc:identifier>
+          <ns4:spatial>Aduard</ns4:spatial>
+          <ns4:spatial>Nederland</ns4:spatial>
+          <ns4:spatial>01002</ns4:spatial>
+          <ns4:spatial>Groningen</ns4:spatial>
+          <ns4:spatial />
+          <dc:subject>verzamelplan</dc:subject>
+          <dc:subject>verzamelplan</dc:subject>
+          <ns4:relation />
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>ead58e40-3861-f0f1-b949-8c102a878900:995a15c6-94d7-11e5-a7e8-1be91e031af4</identifier>
+        <datestamp>2026-02-02T11:57:13Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:verzamelplans</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:verzamelplans</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:source>MIN01003VK1</dc:source>
+          <ns4:isPartOf>Verzamelplans</ns4:isPartOf>
+          <ns4:isPartOf>Kadastrale kaarten 1811-1832</ns4:isPartOf>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/995a15c6-94d7-11e5-a7e8-1be91e031af4/media/b183433a-19fb-fcee-e8f1-d02d67adcb51</ns4:references>
+          <dc:identifier>MIN01003VK1</dc:identifier>
+          <dc:identifier>MIN01003VK1</dc:identifier>
+          <ns4:spatial>Appingedam</ns4:spatial>
+          <ns4:spatial>Nederland</ns4:spatial>
+          <ns4:spatial>01003</ns4:spatial>
+          <ns4:spatial>Groningen</ns4:spatial>
+          <ns4:spatial />
+          <dc:subject>verzamelplan</dc:subject>
+          <dc:subject>verzamelplan</dc:subject>
+          <ns4:relation />
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>ead58e40-3861-f0f1-b949-8c102a878900:995a1c06-94d7-11e5-a7e9-bb3c9f438afd</identifier>
+        <datestamp>2026-02-02T11:57:13Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:verzamelplans</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:verzamelplans</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:source>MIN01004VK1</dc:source>
+          <ns4:isPartOf>Verzamelplans</ns4:isPartOf>
+          <ns4:isPartOf>Kadastrale kaarten 1811-1832</ns4:isPartOf>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/995a1c06-94d7-11e5-a7e9-bb3c9f438afd/media/f13cffaa-2c9e-5467-7d53-1ea0c25a85c4</ns4:references>
+          <dc:identifier>MIN01004VK1</dc:identifier>
+          <dc:identifier>MIN01004VK1</dc:identifier>
+          <ns4:spatial>Baflo</ns4:spatial>
+          <ns4:spatial>Nederland</ns4:spatial>
+          <ns4:spatial>01004</ns4:spatial>
+          <ns4:spatial>Groningen</ns4:spatial>
+          <ns4:spatial />
+          <dc:subject>verzamelplan</dc:subject>
+          <dc:subject>verzamelplan</dc:subject>
+          <ns4:relation />
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>ead58e40-3861-f0f1-b949-8c102a878900:995a3434-94d7-11e5-a7ea-bf5d4bd9440b</identifier>
+        <datestamp>2026-02-02T11:57:13Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:verzamelplans</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:verzamelplans</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:source>MIN01005VK1</dc:source>
+          <ns4:isPartOf>Verzamelplans</ns4:isPartOf>
+          <ns4:isPartOf>Kadastrale kaarten 1811-1832</ns4:isPartOf>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/995a3434-94d7-11e5-a7ea-bf5d4bd9440b/media/a94d14a8-655b-5c4c-3db0-97a7c0065e2b</ns4:references>
+          <dc:identifier>MIN01005VK1</dc:identifier>
+          <dc:identifier>MIN01005VK1</dc:identifier>
+          <ns4:spatial>Bedum</ns4:spatial>
+          <ns4:spatial>Nederland</ns4:spatial>
+          <ns4:spatial>01005</ns4:spatial>
+          <ns4:spatial>Groningen</ns4:spatial>
+          <ns4:spatial />
+          <dc:subject>verzamelplan</dc:subject>
+          <dc:subject>verzamelplan</dc:subject>
+          <ns4:relation />
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>ead58e40-3861-f0f1-b949-8c102a878900:995a4a0a-94d7-11e5-a7eb-0f8cc2d3de2a</identifier>
+        <datestamp>2026-02-02T11:57:13Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:verzamelplans</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:verzamelplans</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:source>MIN07039VK1</dc:source>
+          <ns4:isPartOf>Verzamelplans</ns4:isPartOf>
+          <ns4:isPartOf>Kadastrale kaarten 1811-1832</ns4:isPartOf>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/995a4a0a-94d7-11e5-a7eb-0f8cc2d3de2a/media/e9778a3a-aad6-e320-bf81-3e66a0c9778d</ns4:references>
+          <dc:identifier>MIN07039VK1</dc:identifier>
+          <dc:identifier>MIN07039VK1</dc:identifier>
+          <ns4:spatial>Grosthuizen</ns4:spatial>
+          <ns4:spatial>Nederland</ns4:spatial>
+          <ns4:spatial>07039</ns4:spatial>
+          <ns4:spatial>Noord-Holland</ns4:spatial>
+          <ns4:spatial />
+          <dc:subject>verzamelplan</dc:subject>
+          <dc:subject>verzamelplan</dc:subject>
+          <ns4:relation />
+        </ns2:dc>
+      </metadata>
+    </record>
+    </ListRecords>
+</OAI-PMH>

@@ -1,0 +1,236 @@
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bb:     <https://linkeddata.cultureelerfgoed.nl/rce/beeldbank/shapes/> .
+
+# ---------------------------------------------------------------------------
+# SHACL-shapes voor de Beeldbank van de RCE (foto's, tekeningen, prenten, kaarten).
+#
+# Gebaseerd op de conventies van het Collectie Nederland-profiel
+# (https://github.com/cultureelerfgoed/collectie-nederland-schema-profile), zoals de bibliotheek-ETL:
+#   - sh:message: "<Klasse>: <eigenschap> ontbreekt." / "... moet een URI zijn." enz.
+#   - Violation  = de data is fout of onbruikbaar; de pijplijn publiceert dan niet.
+#   - Warning    = de data hoort anders te zijn, maar publicatie kan door.
+# Elk record neemt zijn eigen nodes mee, dus elk uitvoerbestand is op zichzelf te valideren.
+#
+# De shapes richten zich op schema:CreativeWork: elk werk uit de beeldbank heeft dat type, naast Photograph,
+# VisualArtwork of Map.
+#
+# Bekende hiaten in de bron, daarom Warning en geen Violation:
+#   - kaarten (minuutplans, verzamelplans, aanwijzende tafels) hebben geen titel, maker of rechtenverklaring;
+#     de naam valt terug op het inventarisnummer;
+#   - een deel van de records heeft geen maker, datum of onderwerp;
+#   - de datum is soms vrije tekst ("Reproductie gemaakt in 1989").
+# ---------------------------------------------------------------------------
+
+
+bb:WorkMandatory
+    a              sh:NodeShape ;
+    sh:targetClass schema:CreativeWork ;
+    sh:name        "CreativeWork: verplichte eigenschappen"@nl ;
+    sh:description "Eigenschappen die voor elk werk aanwezig moeten zijn."@nl ;
+    sh:property    [ sh:path schema:name ;             sh:minCount 1 ; sh:severity sh:Violation ;
+                     sh:message "CreativeWork: schema:name ontbreekt (geen titel en geen inventarisnummer)."@nl ] ;
+    sh:property    [ sh:path schema:sdDatePublished ;  sh:minCount 1 ; sh:severity sh:Violation ;
+                     sh:message "CreativeWork: schema:sdDatePublished ontbreekt."@nl ] ;
+    sh:property    [ sh:path schema:isPartOf ;         sh:minCount 1 ; sh:severity sh:Violation ;
+                     sh:message "CreativeWork: schema:isPartOf (de dataset) ontbreekt."@nl ] ;
+    sh:property    [ sh:path schema:identifier ;       sh:minCount 1 ; sh:severity sh:Violation ;
+                     sh:message "CreativeWork: schema:identifier ontbreekt."@nl ] ;
+.
+
+bb:WorkRecommended
+    a              sh:NodeShape ;
+    sh:targetClass schema:CreativeWork ;
+    sh:name        "CreativeWork: aanbevolen eigenschappen"@nl ;
+    sh:description "Eigenschappen die voor elk werk aanwezig horen te zijn; ontbreken levert een waarschuwing op."@nl ;
+    sh:property    [ sh:path schema:url ;              sh:minCount 1 ; sh:severity sh:Warning ;
+                     sh:message "CreativeWork: schema:url (link naar de beeldbank) ontbreekt."@nl ] ;
+    sh:property    [ sh:path schema:image ;            sh:minCount 1 ; sh:severity sh:Warning ;
+                     sh:message "CreativeWork: schema:image ontbreekt (geen beeld gevonden)."@nl ] ;
+    sh:property    [ sh:path schema:license ;          sh:minCount 1 ; sh:severity sh:Warning ;
+                     sh:message "CreativeWork: schema:license ontbreekt (de bron levert geen rechtenverklaring)."@nl ] ;
+    sh:property    [ sh:path schema:dateCreated ;      sh:minCount 1 ; sh:severity sh:Warning ;
+                     sh:message "CreativeWork: schema:dateCreated ontbreekt."@nl ] ;
+    sh:property    [ sh:path schema:creator ;          sh:minCount 1 ; sh:severity sh:Warning ;
+                     sh:message "CreativeWork: schema:creator ontbreekt."@nl ] ;
+.
+
+bb:WorkMaxCount
+    a              sh:NodeShape ;
+    sh:targetClass schema:CreativeWork ;
+    sh:name        "CreativeWork: maximum aantal waarden"@nl ;
+    sh:description "Eigenschappen die maximaal één waarde mogen hebben."@nl ;
+    sh:property    [ sh:path schema:name ;             sh:maxCount 1 ; sh:severity sh:Violation ;
+                     sh:message "CreativeWork: schema:name mag maximaal één waarde hebben."@nl ] ;
+    sh:property    [ sh:path schema:url ;              sh:maxCount 1 ; sh:severity sh:Violation ;
+                     sh:message "CreativeWork: schema:url mag maximaal één waarde hebben."@nl ] ;
+    sh:property    [ sh:path schema:dateCreated ;      sh:maxCount 1 ; sh:severity sh:Violation ;
+                     sh:message "CreativeWork: schema:dateCreated mag maximaal één waarde hebben."@nl ] ;
+    sh:property    [ sh:path schema:sdDatePublished ;  sh:maxCount 1 ; sh:severity sh:Violation ;
+                     sh:message "CreativeWork: schema:sdDatePublished mag maximaal één waarde hebben."@nl ] ;
+    sh:property    [ sh:path schema:license ;          sh:maxCount 1 ; sh:severity sh:Violation ;
+                     sh:message "CreativeWork: schema:license mag maximaal één waarde hebben."@nl ] ;
+    sh:property    [ sh:path schema:contentLocation ;  sh:maxCount 1 ; sh:severity sh:Violation ;
+                     sh:message "CreativeWork: schema:contentLocation mag maximaal één waarde hebben."@nl ] ;
+.
+
+bb:WorkType
+    a              sh:NodeShape ;
+    sh:targetClass schema:CreativeWork ;
+    sh:name        "CreativeWork: waardetype en formaat"@nl ;
+    sh:description "Eigenschappen waarvan de waarde van het juiste type of in het juiste formaat moet zijn."@nl ;
+    sh:property    [ sh:path schema:name ; sh:datatype rdf:langString ; sh:severity sh:Violation ;
+                     sh:message "CreativeWork: schema:name moet tekst met taalcode zijn (bv. \"...\"@nl)."@nl ] ;
+    sh:property    [ sh:path schema:alternateName ; sh:datatype rdf:langString ; sh:severity sh:Violation ;
+                     sh:message "CreativeWork: schema:alternateName moet tekst met taalcode zijn."@nl ] ;
+    sh:property    [ sh:path schema:description ; sh:datatype rdf:langString ; sh:severity sh:Warning ;
+                     sh:message "CreativeWork: schema:description moet tekst met taalcode zijn (bv. \"...\"@nl)."@nl ] ;
+    sh:property    [ sh:path schema:url ; sh:nodeKind sh:IRI ; sh:severity sh:Violation ;
+                     sh:message "CreativeWork: schema:url moet een URI zijn."@nl ] ;
+    sh:property    [ sh:path schema:url ;
+                     sh:pattern "^https://beeldbank\\.cultureelerfgoed\\.nl/" ;
+                     sh:severity sh:Violation ;
+                     sh:message "CreativeWork: schema:url moet een https-link naar de beeldbank zijn."@nl ] ;
+    sh:property    [ sh:path schema:isPartOf ; sh:nodeKind sh:IRI ; sh:severity sh:Violation ;
+                     sh:message "CreativeWork: schema:isPartOf moet een URI zijn."@nl ] ;
+    sh:property    [ sh:path schema:sdDatePublished ; sh:datatype xsd:date ; sh:severity sh:Violation ;
+                     sh:message "CreativeWork: schema:sdDatePublished moet de vorm JJJJ-MM-DD (xsd:date) hebben."@nl ] ;
+    # de datum is meestal ISO (jaar, jaar-maand of datum); vrije tekst uit de bron wordt wel gepubliceerd, maar gemeld
+    sh:property    [ sh:path schema:dateCreated ;
+                     sh:or ( [ sh:datatype xsd:date ] [ sh:datatype xsd:gYearMonth ] [ sh:datatype xsd:gYear ] ) ;
+                     sh:severity sh:Warning ;
+                     sh:message "CreativeWork: schema:dateCreated is geen jaartal, maand of datum (vrije tekst uit de bron)."@nl ] ;
+    sh:property    [ sh:path schema:license ; sh:nodeKind sh:IRI ; sh:severity sh:Violation ;
+                     sh:message "CreativeWork: schema:license moet een URI zijn."@nl ] ;
+    sh:property    [ sh:path schema:creator ; sh:nodeKind sh:IRI ; sh:severity sh:Violation ;
+                     sh:message "CreativeWork: schema:creator moet een URI zijn."@nl ] ;
+    sh:property    [ sh:path schema:contributor ; sh:nodeKind sh:IRI ; sh:severity sh:Violation ;
+                     sh:message "CreativeWork: schema:contributor moet een URI zijn."@nl ] ;
+    sh:property    [ sh:path schema:copyrightHolder ; sh:nodeKind sh:IRI ; sh:severity sh:Violation ;
+                     sh:message "CreativeWork: schema:copyrightHolder moet een URI zijn."@nl ] ;
+    sh:property    [ sh:path schema:about ; sh:nodeKind sh:IRI ; sh:severity sh:Violation ;
+                     sh:message "CreativeWork: schema:about moet een URI zijn."@nl ] ;
+    sh:property    [ sh:path schema:contentLocation ; sh:nodeKind sh:IRI ; sh:class schema:Place ; sh:severity sh:Violation ;
+                     sh:message "CreativeWork: schema:contentLocation moet een URI van een schema:Place zijn."@nl ] ;
+    sh:property    [ sh:path schema:image ; sh:nodeKind sh:IRI ; sh:class schema:ImageObject ; sh:severity sh:Violation ;
+                     sh:message "CreativeWork: schema:image moet een URI van een schema:ImageObject zijn."@nl ] ;
+.
+
+# Een monument is alleen een IRI naar de kennisgraaf (cho-kennis); er staat geen beschrijving van in deze dataset.
+
+bb:ImageObjectShape
+    a              sh:NodeShape ;
+    sh:targetClass schema:ImageObject ;
+    sh:name        "ImageObject: eigenschappen"@nl ;
+    sh:description "Een beeld heeft een link naar het bestand en een miniatuur, beide op de beeldserver van Memorix."@nl ;
+    sh:property    [ sh:path schema:contentUrl ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ;
+                     sh:pattern "^https://images\\.memorix\\.nl/rce/" ; sh:severity sh:Violation ;
+                     sh:message "ImageObject: schema:contentUrl moet precies één https-link naar de beeldserver zijn."@nl ] ;
+    sh:property    [ sh:path schema:thumbnailUrl ; sh:maxCount 1 ; sh:nodeKind sh:IRI ;
+                     sh:pattern "^https://images\\.memorix\\.nl/rce/" ; sh:severity sh:Violation ;
+                     sh:message "ImageObject: schema:thumbnailUrl moet één https-link naar de beeldserver zijn."@nl ] ;
+.
+
+bb:PlaceShape
+    a              sh:NodeShape ;
+    sh:targetClass schema:Place ;
+    sh:name        "Place: eigenschappen"@nl ;
+    sh:description "Een plaats heeft één naam (tekst met taalcode)."@nl ;
+    sh:property    [ sh:path schema:name ; sh:minCount 1 ; sh:severity sh:Violation ;
+                     sh:message "Place: schema:name ontbreekt."@nl ] ;
+    sh:property    [ sh:path schema:name ; sh:datatype rdf:langString ; sh:uniqueLang true ; sh:severity sh:Violation ;
+                     sh:message "Place: schema:name moet tekst met taalcode zijn, maximaal één per taal."@nl ] ;
+    sh:property    [ sh:path schema:address ; sh:maxCount 1 ; sh:nodeKind sh:IRI ; sh:class schema:PostalAddress ;
+                     sh:severity sh:Violation ;
+                     sh:message "Place: schema:address moet maximaal één URI van een schema:PostalAddress zijn."@nl ] ;
+    sh:property    [ sh:path schema:containedInPlace ; sh:nodeKind sh:IRI ; sh:severity sh:Violation ;
+                     sh:message "Place: schema:containedInPlace moet een URI zijn."@nl ] ;
+.
+
+bb:AdministrativeAreaShape
+    a              sh:NodeShape ;
+    sh:targetClass schema:AdministrativeArea ;
+    sh:name        "AdministrativeArea: eigenschappen"@nl ;
+    sh:property    [ sh:path schema:name ; sh:minCount 1 ; sh:datatype rdf:langString ; sh:uniqueLang true ;
+                     sh:severity sh:Violation ;
+                     sh:message "AdministrativeArea: schema:name moet tekst met taalcode zijn, precies één per taal."@nl ] ;
+.
+
+bb:PostalAddressShape
+    a              sh:NodeShape ;
+    sh:targetClass schema:PostalAddress ;
+    sh:name        "PostalAddress: eigenschappen"@nl ;
+    sh:description "Een adres heeft een plaats; een postcode heeft de vorm 1234 AB."@nl ;
+    sh:property    [ sh:path schema:addressLocality ; sh:minCount 1 ; sh:maxCount 1 ; sh:severity sh:Violation ;
+                     sh:message "PostalAddress: schema:addressLocality moet precies één waarde hebben."@nl ] ;
+    sh:property    [ sh:path schema:streetAddress ; sh:maxCount 1 ; sh:severity sh:Violation ;
+                     sh:message "PostalAddress: schema:streetAddress mag maximaal één waarde hebben."@nl ] ;
+    sh:property    [ sh:path schema:postalCode ; sh:maxCount 1 ; sh:pattern "^\\d{4} [A-Z]{2}$" ; sh:severity sh:Violation ;
+                     sh:message "PostalAddress: schema:postalCode moet de vorm 1234 AB hebben."@nl ] ;
+.
+
+bb:PersonShape
+    a              sh:NodeShape ;
+    sh:targetClass schema:Person ;
+    sh:name        "Person: eigenschappen"@nl ;
+    sh:description "Een persoon heeft precies één naam (tekst met taalcode)."@nl ;
+    sh:property    [ sh:path schema:name ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype rdf:langString ;
+                     sh:severity sh:Violation ;
+                     sh:message "Person: schema:name moet precies één tekstwaarde met taalcode zijn."@nl ] ;
+.
+
+bb:OrganizationShape
+    a              sh:NodeShape ;
+    sh:targetClass schema:Organization ;
+    sh:name        "Organization: eigenschappen"@nl ;
+    sh:description "Een organisatie heeft een naam (tekst met taalcode, maximaal één per taal)."@nl ;
+    sh:property    [ sh:path schema:name ; sh:minCount 1 ; sh:severity sh:Violation ;
+                     sh:message "Organization: schema:name ontbreekt."@nl ] ;
+    sh:property    [ sh:path schema:name ; sh:datatype rdf:langString ; sh:uniqueLang true ; sh:severity sh:Violation ;
+                     sh:message "Organization: schema:name moet tekst met taalcode zijn, maximaal één per taal."@nl ] ;
+.
+
+bb:DefinedTermShape
+    a              sh:NodeShape ;
+    sh:targetClass schema:DefinedTerm ;
+    sh:name        "DefinedTerm: eigenschappen"@nl ;
+    sh:description "Een term heeft een naam (tekst met taalcode, maximaal één per taal)."@nl ;
+    sh:property    [ sh:path schema:name ; sh:minCount 1 ; sh:datatype rdf:langString ; sh:uniqueLang true ;
+                     sh:severity sh:Violation ;
+                     sh:message "DefinedTerm: schema:name moet tekst met taalcode zijn, precies één per taal."@nl ] ;
+.
+
+bb:CollectionShape
+    a              sh:NodeShape ;
+    sh:targetClass schema:Collection ;
+    sh:name        "Collection: eigenschappen"@nl ;
+    sh:description "Een collectie heeft een naam (tekst met taalcode, maximaal één per taal)."@nl ;
+    sh:property    [ sh:path schema:name ; sh:minCount 1 ; sh:datatype rdf:langString ; sh:uniqueLang true ;
+                     sh:severity sh:Violation ;
+                     sh:message "Collection: schema:name moet tekst met taalcode zijn, precies één per taal."@nl ] ;
+.
+
+bb:PropertyValueShape
+    a              sh:NodeShape ;
+    sh:targetClass schema:PropertyValue ;
+    sh:name        "PropertyValue: eigenschappen"@nl ;
+    sh:description "Een identifier heeft precies één tekstwaarde en een soort (propertyID)."@nl ;
+    sh:property    [ sh:path schema:value ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ;
+                     sh:severity sh:Violation ;
+                     sh:message "PropertyValue: schema:value moet precies één tekstwaarde zonder taalcode zijn."@nl ] ;
+    sh:property    [ sh:path schema:propertyID ; sh:minCount 1 ; sh:severity sh:Violation ;
+                     sh:message "PropertyValue: schema:propertyID ontbreekt."@nl ] ;
+.
+
+bb:DatasetShape
+    a              sh:NodeShape ;
+    sh:targetClass schema:Dataset ;
+    sh:name        "Dataset: eigenschappen"@nl ;
+    sh:description "De dataset heeft een naam en een uitgever."@nl ;
+    sh:property    [ sh:path schema:name ;      sh:minCount 1 ; sh:severity sh:Violation ;
+                     sh:message "Dataset: schema:name ontbreekt."@nl ] ;
+    sh:property    [ sh:path schema:publisher ; sh:minCount 1 ; sh:nodeKind sh:IRI ; sh:severity sh:Violation ;
+                     sh:message "Dataset: schema:publisher ontbreekt of is geen URI."@nl ] ;
+.

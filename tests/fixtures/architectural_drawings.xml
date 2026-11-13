@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='utf-8'?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:ns4="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+  <responseDate>2026-11-13T18:31:15Z</responseDate>
+  <request>https://example.org/oai</request>
+  <ListRecords>
+    <record>
+      <header>
+        <identifier>aff92206-3f22-11e4-90f0-6f0964294532:7c10a7b6-0bbb-a35f-05a1-3d6f0cd256ce</identifier>
+        <datestamp>2018-07-23T17:32:52Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:architectural_drawings</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:architectural_drawings</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:source>LM-261</dc:source>
+          <ns4:identifier>LM-261</ns4:identifier>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/7c10a7b6-0bbb-a35f-05a1-3d6f0cd256ce/media/781ec43a-d590-490d-0db2-c3005ef7ab57</ns4:references>
+          <dc:identifier>LM-261</dc:identifier>
+          <ns4:spatial />
+          <ns4:relation />
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>aff92206-3f22-11e4-90f0-6f0964294532:82b7ea3f-d0a9-3a8b-97d5-df5c7eb30f25</identifier>
+        <datestamp>2024-10-25T09:46:53Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:architectural_drawings</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:architectural_drawings</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:source>RCE-647_Stapper56</dc:source>
+          <dc:creator>Stapper, J. (Jan)</dc:creator>
+          <dc:description>Kadastrale minuutplan / kaart met inventarisatie van gebouwen van Vianen - schaal 1:1000</dc:description>
+          <dc:description>Digitale scan van aquarelkaart - Deze kaart is onderdeel van de inventarisatie van de te beschermen stads en dorpsgezichten uitgevoerd door Jan Stapper in de periode 1948 - 1968</dc:description>
+          <ns4:isPartOf>Kaarten</ns4:isPartOf>
+          <ns4:isPartOf>RCE - Gebouwd</ns4:isPartOf>
+          <ns4:identifier>RCE-647_Stapper56</ns4:identifier>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/82b7ea3f-d0a9-3a8b-97d5-df5c7eb30f25/media/d9a4c921-f1f9-9376-8d4f-0ffb00cf608f</ns4:references>
+          <dc:identifier>RCE-647_Stapper56</dc:identifier>
+          <ns4:spatial>Vianen</ns4:spatial>
+          <ns4:spatial />
+          <dc:subject>Stapperkaarten</dc:subject>
+          <dc:subject>kaarten (ontwerptekening)</dc:subject>
+          <dc:subject>kaarten (topografie)</dc:subject>
+          <dc:subject>stads- en dorpsgezichten</dc:subject>
+          <ns4:relation />
+          <dc:rights>https://creativecommons.org/licenses/by-sa/4.0/</dc:rights>
+          <ns4:title>Kadastrale minuutplan / kaart met inventarisatie van gebouwen van Vianen - schaal 1:1000</ns4:title>
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>aff92206-3f22-11e4-90f0-6f0964294532:86985bc2-862c-3e05-76f9-c81b7f90f0e2</identifier>
+        <datestamp>2024-10-25T09:46:56Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:architectural_drawings</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:architectural_drawings</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:date>1959</dc:date>
+          <dc:source>RCE-647_Stapper29</dc:source>
+          <dc:creator>Stapper, J. (Jan)</dc:creator>
+          <dc:description>Kaart met (bouwkundige) waardering van Harlingen - schaal 1:1000</dc:description>
+          <dc:description>Digitale scan van aquarelkaart - Deze kaart is onderdeel van de inventarisatie van de te beschermen stads en dorpsgezichten uitgevoerd door Jan Stapper in de periode 1948 - 1968</dc:description>
+          <ns4:isPartOf>Kaarten</ns4:isPartOf>
+          <ns4:isPartOf>RCE - Gebouwd</ns4:isPartOf>
+          <ns4:identifier>RCE-647_Stapper29</ns4:identifier>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/86985bc2-862c-3e05-76f9-c81b7f90f0e2/media/cc680b89-9215-8794-77cb-864475d6d72b</ns4:references>
+          <dc:identifier>RCE-647_Stapper29</dc:identifier>
+          <ns4:spatial>Harlingen</ns4:spatial>
+          <ns4:spatial />
+          <dc:subject>Stapperkaarten</dc:subject>
+          <dc:subject>kaarten (ontwerptekening)</dc:subject>
+          <dc:subject>kaarten (topografie)</dc:subject>
+          <dc:subject>stads- en dorpsgezichten</dc:subject>
+          <ns4:relation />
+          <dc:rights>https://creativecommons.org/licenses/by-sa/4.0/</dc:rights>
+          <ns4:title>Kaart met (bouwkundige) waardering van Harlingen - schaal 1:1000</ns4:title>
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>aff92206-3f22-11e4-90f0-6f0964294532:a64c1903-4b0c-2121-b909-f4b8ef07978b</identifier>
+        <datestamp>2024-10-25T09:47:24Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:architectural_drawings</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:architectural_drawings</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:date>1956</dc:date>
+          <dc:source>RCE-647_Stapper08</dc:source>
+          <dc:creator>Stapper, J. (Jan)</dc:creator>
+          <dc:description>Kaart met (bouwkundige) waardering van Culemborg - schaal 1:1000</dc:description>
+          <dc:description>Digitale scan van aquarelkaart - Deze kaart is onderdeel van de inventarisatie van de te beschermen stads en dorpsgezichten uitgevoerd door Jan Stapper in de periode 1948 - 1968</dc:description>
+          <ns4:isPartOf>Kaarten</ns4:isPartOf>
+          <ns4:isPartOf>RCE - Gebouwd</ns4:isPartOf>
+          <ns4:identifier>RCE-647_Stapper08</ns4:identifier>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/a64c1903-4b0c-2121-b909-f4b8ef07978b/media/ce855e9b-ce01-60bf-8219-941e98ba77b4</ns4:references>
+          <dc:identifier>RCE-647_Stapper08</dc:identifier>
+          <ns4:spatial>Culemborg</ns4:spatial>
+          <ns4:spatial />
+          <dc:subject>Stapperkaarten</dc:subject>
+          <dc:subject>kaarten (ontwerptekening)</dc:subject>
+          <dc:subject>kaarten (topografie)</dc:subject>
+          <dc:subject>stads- en dorpsgezichten</dc:subject>
+          <ns4:relation />
+          <dc:rights>https://creativecommons.org/licenses/by-sa/4.0/</dc:rights>
+          <ns4:title>Kaart met (bouwkundige) waardering van Culemborg - schaal 1:1000</ns4:title>
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>aff92206-3f22-11e4-90f0-6f0964294532:a692ae63-ee2a-3f71-76ad-b3b27d9390a3</identifier>
+        <datestamp>2024-10-25T09:47:24Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:architectural_drawings</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:architectural_drawings</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:date>1953</dc:date>
+          <dc:source>RCE-647_Stapper57</dc:source>
+          <dc:creator>Stapper, J. (Jan)</dc:creator>
+          <dc:description>Kaart met (bouwkundige) waardering, schets van Vreeland - schaal 1:1250</dc:description>
+          <dc:description>Digitale scan van aquarelkaart - Deze kaart is onderdeel van de inventarisatie van de te beschermen stads en dorpsgezichten uitgevoerd door Jan Stapper in de periode 1948 - 1968</dc:description>
+          <ns4:isPartOf>Kaarten</ns4:isPartOf>
+          <ns4:isPartOf>RCE - Gebouwd</ns4:isPartOf>
+          <ns4:identifier>RCE-647_Stapper57</ns4:identifier>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/a692ae63-ee2a-3f71-76ad-b3b27d9390a3/media/4ed3f952-0907-b664-59f5-877e688d57e7</ns4:references>
+          <dc:identifier>RCE-647_Stapper57</dc:identifier>
+          <ns4:spatial>Vreeland</ns4:spatial>
+          <ns4:spatial />
+          <dc:subject>Stapperkaarten</dc:subject>
+          <dc:subject>kaarten (ontwerptekening)</dc:subject>
+          <dc:subject>kaarten (topografie)</dc:subject>
+          <dc:subject>stads- en dorpsgezichten</dc:subject>
+          <ns4:relation />
+          <dc:rights>https://creativecommons.org/licenses/by-sa/4.0/</dc:rights>
+          <ns4:title>Kaart met (bouwkundige) waardering, schets van Vreeland - schaal 1:1250</ns4:title>
+        </ns2:dc>
+      </metadata>
+    </record>
+    <record>
+      <header>
+        <identifier>aff92206-3f22-11e4-90f0-6f0964294532:aa1b8d1d-08c5-ba0b-5ca6-de3032332964</identifier>
+        <datestamp>2024-10-25T09:47:28Z</datestamp>
+        <setSpec>tenant:rce</setSpec>
+        <setSpec>search_s_entity_type:architectural_drawings</setSpec>
+        <setSpec>tenant:rce:search_s_entity_type:architectural_drawings</setSpec>
+      </header>
+      <metadata>
+        <ns2:dc>
+          <dc:date>1961</dc:date>
+          <dc:source>RCE-647_Stapper23</dc:source>
+          <dc:creator>Stapper, J. (Jan)</dc:creator>
+          <dc:description>Kadastrale minuutplan / kaart met inventarisatie van gebouwen van Franeker - schaal 1:1000</dc:description>
+          <dc:description>Digitale scan van aquarelkaart - Deze kaart is onderdeel van de inventarisatie van de te beschermen stads en dorpsgezichten uitgevoerd door Jan Stapper in de periode 1948 - 1968</dc:description>
+          <ns4:isPartOf>Kaarten</ns4:isPartOf>
+          <ns4:isPartOf>RCE - Gebouwd</ns4:isPartOf>
+          <ns4:identifier>RCE-647_Stapper23</ns4:identifier>
+          <ns4:references>http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/aa1b8d1d-08c5-ba0b-5ca6-de3032332964/media/dad8c09d-6486-57f4-3b87-611d700ca960</ns4:references>
+          <dc:identifier>RCE-647_Stapper23</dc:identifier>
+          <ns4:spatial>Franeker</ns4:spatial>
+          <ns4:spatial />
+          <dc:subject>Stapperkaarten</dc:subject>
+          <dc:subject>kaarten (ontwerptekening)</dc:subject>
+          <dc:subject>kaarten (topografie)</dc:subject>
+          <dc:subject>stads- en dorpsgezichten</dc:subject>
+          <ns4:relation />
+          <dc:rights>https://creativecommons.org/licenses/by-sa/4.0/</dc:rights>
+          <ns4:title>Kadastrale minuutplan / kaart met inventarisatie van gebouwen van Franeker - schaal 1:1000</ns4:title>
+        </ns2:dc>
+      </metadata>
+    </record>
+    </ListRecords>
+</OAI-PMH>
