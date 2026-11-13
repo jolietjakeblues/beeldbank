@@ -109,12 +109,19 @@ jobs:
           LDV_API_TOKEN: ${{ secrets.LDV_API_TOKEN }}
         run: |
           set -e
-          for dir in artifacts/beeldbank-*; do
-            source=$(basename "$dir" | sed 's/^beeldbank-//')
+          # download-artifact zet bij een enkele bron de bestanden direct in artifacts/, bij meer bronnen in een submap per bron.
+          # De bron volgt daarom uit de bestandsnaam ({bron}-0000.jsonld), niet uit de mapnaam.
+          find artifacts -name '*.jsonld' | sort > jsonld-bestanden.txt
+          if [ ! -s jsonld-bestanden.txt ]; then
+            echo "::error::Geen .jsonld-bestanden gevonden in artifacts/; er is niets te publiceren."
+            find artifacts
+            exit 1
+          fi
+          for source in $(sed -E 's#.*/##; s#-[0-9]{4}\.jsonld$##' jsonld-bestanden.txt | sort -u); do
             graph="${GRAPH_BASE}/${source}"
             # eerste bestand vervangt de graph van de vorige run, de rest wordt eraan toegevoegd
             mode=overwrite
-            for file in $(ls "$dir"/${source}-*.jsonld | sort); do
+            for file in $(grep -E "/${source}-[0-9]{4}\.jsonld$" jsonld-bestanden.txt); do
               echo "Importeer $file in $graph (mode: $mode)"
               ./triplydb-linux import-from-file \
                 --dataset "${TRIPLY_DATASET}" --account "${TRIPLY_ACCOUNT}" --url "${TRIPLY_URL}" \
