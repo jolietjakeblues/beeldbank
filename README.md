@@ -4,7 +4,7 @@ Haalt de beeldbank van de Rijksdienst voor het Cultureel Erfgoed (RCE) op via OA
 volgens **schema.org**, toetst ze met **SHACL** en publiceert ze elke week met een **GitHub Action** en de **TriplyDB-CLI** in de
 Linked Data Voorziening (LDV) van de RCE. Dezelfde opzet als de [bibliotheek-ETL](../projects/bibliotheek) en de kunst-ETL.
 
-- Beoogde dataset: `https://linkeddata.cultureelerfgoed.nl/rce/beeldbank`
+- Doeldataset in de LDV: `https://linkeddata.cultureelerfgoed.nl/rce/afbeeldingen` (SPARQL: `https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/afbeeldingen/sparql`)
 - Bron: OAI-PMH van Memorix, tenant `rce`, set `photos`, formaat `oai_dc`
 
 > **Status.** Gebouwd en getest: 74 tests slagen, en live steekproeven (1.000 foto's plus 400 uit het midden van de set) gaven geen SHACL-Violations. Een volledige run en de eerste publicatie naar Triply zijn **nog niet gedraaid**. Open besluiten
@@ -21,7 +21,7 @@ Elke run oogst alles: de OAI meldt geen verwijderde records (`deletedRecord = no
 
 | Set | Records | Wordt | Graph in Triply |
 |---|---:|---|---|
-| `tenant:rce:search_s_entity_type:photos` | 565.178 | `schema:Photograph` | `https://linkeddata.cultureelerfgoed.nl/rce/beeldbank/graphs/photos` |
+| `tenant:rce:search_s_entity_type:photos` | 565.178 | `schema:Photograph` | `https://linkeddata.cultureelerfgoed.nl/rce/afbeeldingen/graphs/photos` |
 
 Aantal volgens de OAI op 13 november 2026. **Alleen de foto's worden geoogst.** De andere sets van `tenant:rce` (aanwijzende tafels,
 bouwtekeningen, prenten, minuutplans, verzamelplans) zijn uitgeschakeld in `config/config.yml` en in de workflow; de code, de shapes en de

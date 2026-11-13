@@ -6,7 +6,7 @@ De bron levert Dublin Core zonder labels. De betekenis van een veld volgt uit de
 heuristieken (adres, datum, identifiers) aparte functies in `src/transform_service.py` met eigen tests. Lege elementen, waarvan de
 bron er veel levert, worden weggelaten.
 
-URI's: `https://linkeddata.cultureelerfgoed.nl/rce/beeldbank/id/{klasse}/{uuid3}`. Het uuid3 volgt uit een vaste sleutel (het uuid
+URI's: `https://linkeddata.cultureelerfgoed.nl/rce/afbeeldingen/id/{klasse}/{uuid3}`. Het uuid3 volgt uit een vaste sleutel (het uuid
 van het record, of de naam), dus een tweede run levert dezelfde adressen op.
 
 ## Het werk

@@ -2,9 +2,9 @@
 # base uri voor linked data, nodes worden op basis van deze uri opgebouwd:
 #   {BASE_URI}{COLLECTION_ID}/id/{klasse}/{uuid}
 BASE_URI: 'https://linkeddata.cultureelerfgoed.nl/'
-COLLECTION_ID: 'rce/beeldbank'
+COLLECTION_ID: 'rce/afbeeldingen'
 # uri van de dataset zelf (schema:isPartOf van elk record)
-DATASET_URI: 'https://linkeddata.cultureelerfgoed.nl/rce/beeldbank/'
+DATASET_URI: 'https://linkeddata.cultureelerfgoed.nl/rce/afbeeldingen/'
 DATASET_NAME: 'Beeldbank RCE'
 DATASET_DESCRIPTION: 'Foto''s, bouwtekeningen, prenten en oude tekeningen, kadastrale minuutplans, aanwijzende tafels en verzamelplans uit de Beeldbank van de Rijksdienst voor het Cultureel Erfgoed.'
 

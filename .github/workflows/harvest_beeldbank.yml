@@ -25,10 +25,10 @@ on:
 env:
   CACHE_PATH: 'data/'
   TRIPLY_ACCOUNT: 'rce'
-  TRIPLY_DATASET: 'beeldbank'
+  TRIPLY_DATASET: 'afbeeldingen'
   TRIPLY_URL: 'https://api.linkeddata.cultureelerfgoed.nl'
   # vaste graphnamen per bron: een nieuwe run vervangt de graph van de vorige run (geen ophoping)
-  GRAPH_BASE: 'https://linkeddata.cultureelerfgoed.nl/rce/beeldbank/graphs'
+  GRAPH_BASE: 'https://linkeddata.cultureelerfgoed.nl/rce/afbeeldingen/graphs'
 
 # nooit twee runs tegelijk: de tweede zou halverwege de graph van de eerste overschrijven
 concurrency:
@@ -135,6 +135,14 @@ jobs:
         env:
           LDV_API_TOKEN: ${{ secrets.LDV_API_TOKEN }}
         run: |
+          # De dataset heeft (nog) geen eigen SPARQL-service: dan valt er niets te synchroniseren en slaagt deze stap.
+          services=$(curl --fail-with-body -sS -H "Authorization: Bearer ${LDV_API_TOKEN}" \
+            "${TRIPLY_URL}/datasets/${TRIPLY_ACCOUNT}/${TRIPLY_DATASET}/services")
+          echo "Services: ${services}"
+          if [ "${services}" = "[]" ]; then
+            echo "::notice::Geen SPARQL-service op ${TRIPLY_ACCOUNT}/${TRIPLY_DATASET}, sync overgeslagen."
+            exit 0
+          fi
           curl --fail-with-body -sS -X POST \
             -H "Authorization: Bearer ${LDV_API_TOKEN}" -H 'Content-Type: application/json' \
             "${TRIPLY_URL}/datasets/${TRIPLY_ACCOUNT}/${TRIPLY_DATASET}/services/${TRIPLY_DATASET}" \
