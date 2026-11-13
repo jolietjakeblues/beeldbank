@@ -6,7 +6,7 @@
 2. Zet twee secrets (Settings → Secrets and variables → Actions):
    - `MEMORIX_OAI_KEY`: het deel van de OAI-URL na `/key/` (voor `oai_dc`).
    - `LDV_API_TOKEN`: een token met schrijfrechten op de dataset in de LDV.
-3. Controleer in de LDV of de dataset `rce/beeldbank` bestaat, of maak hem aan (open besluit 1 in [besluiten.md](besluiten.md)).
+3. De doeldataset is `rce/afbeeldingen` (bestaat al, geen SPARQL-service; de sync-stap slaat dan over). Zie open besluit 1 in [besluiten.md](besluiten.md).
    Wilt u eerst naar een testdataset, zet dan `TRIPLY_DATASET` in de workflow tijdelijk op een andere naam.
 
 ## Een run starten
@@ -59,7 +59,7 @@ inclusief transformatie. Voor de foto's is dat een schatting van 45 tot 60 minut
 
 ## Terugdraaien
 
-De foto's staan in de graph `…/rce/beeldbank/graphs/photos`. Een volgende run vervangt die graph. Wilt u ze verwijderen,
+De foto's staan in de graph `…/rce/afbeeldingen/graphs/photos`. Een volgende run vervangt die graph. Wilt u ze verwijderen,
 verwijder dan die graph in de LDV. Een mislukte run publiceert niets, dus de vorige versie blijft staan.
 (Tijdens de publicatie zelf, tussen `overwrite` en de laatste `merge` van een set, is die set tijdelijk onvolledig.)
 
