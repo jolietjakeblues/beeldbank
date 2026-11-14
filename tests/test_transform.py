@@ -20,13 +20,14 @@ TYPE_PER_BRON = {'photos': SDO.Photograph, 'architectural_drawings': SDO.VisualA
     ('1985-04-12', XSD.date, '1985-04-12'),
     ('1985-04', XSD.gYearMonth, '1985-04'),
     ('1985', XSD.gYear, '1985'),
+    ('2004-02-29', XSD.date, '2004-02-29'),
 ])
 def test_parse_date(value, datatype, lexical):
     lit = T.parse_date(value)
     assert lit.datatype == datatype and str(lit) == lexical
 
 
-@pytest.mark.parametrize('value', ['1985-13', '1985-04-32', '9999 - 99 - 9',
+@pytest.mark.parametrize('value', ['1985-13', '1985-04-32', '2005-04-31', '2005-02-29', '1978-06-00', '9999 - 99 - 9',
                                    'Reproductie gemaakt in 1989 (A. Schollen)', '', 'ca. 1900'])
 def test_parse_date_geen_iso(value):
     assert T.parse_date(value) is None

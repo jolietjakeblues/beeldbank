@@ -7,6 +7,7 @@ Bron: `oai_dc` met `dc:` en `dcterms:`-elementen. De elementen zijn niet gelabel
 volgorde en de vorm van de waarde. Daarom staan de heuristieken (adres, datum, identifiers) in aparte,
 geteste functies. De mapping staat in `docs/mapping.md`.
 """
+import datetime
 import re
 from collections import defaultdict
 from typing import Optional
@@ -96,10 +97,14 @@ def parse_date(value: str) -> Optional[Literal]:
     if not m:
         return None
     year, month, day = m.groups()
-    month_ok = month is None or 1 <= int(month) <= 12
-    day_ok = day is None or 1 <= int(day) <= 31
-    if not (month_ok and day_ok):
+    if month is not None and not 1 <= int(month) <= 12:
         return None
+    if day is not None:
+        # echte kalendercontrole: '2005-04-31' bestaat niet en zou door Triply als ongeldige xsd:date worden afgekeurd
+        try:
+            datetime.date(int(year), int(month), int(day))
+        except (TypeError, ValueError):
+            return None
     if day:
         return Literal(f'{year}-{month}-{day}', datatype=XSD.date)
     if month:
