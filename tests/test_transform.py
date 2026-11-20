@@ -134,14 +134,17 @@ def test_foto_heeft_maker_licentie_beeld_en_link(graph_for):
     assert content.rsplit('/', 1)[1][:-4] in url        # het beeld is dat van de link
 
 
-def test_monumentnummer_wordt_een_iri(graph_for):
+def test_monumentnummer_wordt_een_monument_met_rijksmonumentnummer(graph_for):
     graph = graph_for('photos')
-    prefix = 'https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/rijksmonument/'
-    monuments = [o for o in graph.objects(None, SDO.about) if str(o).startswith(prefix)]
+    monuments = list(graph.subjects(RDF.type, SDO.LandmarksOrHistoricalBuildings))
     assert monuments
-    assert all(str(m)[len(prefix):].isdigit() for m in monuments)
-    # het monument zelf wordt niet beschreven: alleen een IRI
-    assert all(not list(graph.predicate_objects(m)) for m in monuments)
+    for m in monuments:
+        # een eigen node in deze dataset, geen gok naar een URI in de CHO-data (daar is het nummer in de URI een ander getal)
+        assert str(m).startswith('https://linkeddata.cultureelerfgoed.nl/rce/afbeeldingen/id/monument/')
+        [ident] = list(graph.objects(m, SDO.identifier))
+        assert str(graph.value(ident, SDO.propertyID)) == 'rijksmonumentnummer'
+        assert str(graph.value(ident, SDO.value)).isdigit()
+    assert not any('cho-kennis' in str(o) for o in graph.objects(None, SDO.about))
 
 
 def test_kaart_zonder_titel_valt_terug_op_het_inventarisnummer(graph_for):

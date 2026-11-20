@@ -11,7 +11,7 @@ Twee lijsten: wat nog besloten of uitgezocht moet worden, en welke keuzes zijn g
 | 3 | **Twee OAI-sleutels** | De sleutel voor `ese` geeft 23.533 records, die voor `oai_dc` 813.356. Er is gekozen voor `oai_dc` (de sleutel die de beheerder noemde). De `ese`-sleutel is waarschijnlijk een selectie met beeld, maar dat is niet nagegaan. | beheerder | `ese` wordt niet gebruikt |
 | 4 | **Licentie van de metadata** | `LICENSE_URI` is leeg. Het beeld heeft per record een licentie (CC BY-SA 3.0 of 4.0); de metadata als geheel nog niet. | RCE | geen licentie op datasetniveau |
 | 5 | **Records zonder licentie** | Bij kaarten (minuutplans, verzamelplans, tafels) en bij ongeveer één op de zes foto's in een steekproef levert de bron geen `dc:rights`. Er wordt niets verzonnen; ze krijgen een Warning. Is hun status bekend (bijvoorbeeld publiek domein)? | RCE, beeldbank | geen `schema:license` bij die records |
-| 6 | **Monument-IRI** | `Monumentnummer: N` wordt `…/cho-kennis/id/rijksmonument/N`. Dat patroon komt uit andere RCE-projecten; het is niet gecontroleerd tegen de kennisgraaf. Is `Monumentnummer` altijd een rijksmonumentnummer? | RCE | gepubliceerd als alleen een IRI |
+| 6 | **Koppeling met de CHO-data** | `Monumentnummer: N` is een rijksmonumentnummer; de CHO-URI's gebruiken een ander getal. De eerste publicatie gokte de URI en wees daarmee naar verkeerde monumenten (is gecorrigeerd: eigen monument-node, zie [mapping.md](mapping.md)). Een directe IRI naar de CHO-data zou een opzoektabel (rijksmonumentnummer → URI) uit het CHO-endpoint vragen: besloten dat niet te doen, koppelen in SPARQL volstaat. Open: is `Monumentnummer` altijd een rijksmonumentnummer? | RCE | koppeling in SPARQL via `ceo:rijksmonumentnummer` |
 | 7 | **Beeld-URL's** | `fullsize` en `350x350` zijn voor één record gecontroleerd. Dat de beeldserver die patronen voor alle sets en alle records aanbiedt, is niet nagegaan. | beheerder | patronen staan in `config/config.yml` |
 | 8 | **Grootte** | Een steekproef geeft ongeveer 4,7 kB JSON-LD per foto: de foto's alleen al zijn dan circa 2,6 GB. De Triply-import ervan (80 bestanden van 7.000 records) is niet getest. | beheerder van de pijplijn | eerste volledige run handmatig, let op de looptijd van `publish` |
 | 9 | **NDE Datasetregister** | De dataset moet nog met een beschrijving worden aangemeld, zoals de andere RCE-datasets. Los van deze pijplijn. | RCE | n.v.t. |
@@ -43,7 +43,7 @@ Twee lijsten: wat nog besloten of uitgezocht moet worden, en welke keuzes zijn g
 | **Records zonder inhoud overslaan** | enkele records hebben alleen een link zonder beeld (5 van 5.234 bij de prenten). Ze worden geteld en met hun identifier in het manifest gezet; de controle faalt er niet op. |
 | **`dcterms:isPartOf` met één teken niet publiceren** | dat is de sectieletter van een kadastrale kaart en staat al in het inventarisnummer. |
 | **Gemeentecode van kaarten niet publiceren** | de betekenis (kadastraal of historisch) is niet vastgesteld. |
-| **Monument alleen als IRI** | de beschrijving staat in de kennisgraaf; zo ontstaan er geen tweede, afwijkende gegevens. |
+| **Monument als eigen node met alleen het rijksmonumentnummer** | de CHO-URI is niet af te leiden uit dat nummer; de beschrijving staat in de kennisgraaf, dus er komen geen tweede, afwijkende gegevens. Zelfde opzet als de bibliotheek. |
 | **Adres uit `dcterms:spatial` met heuristiek** | de bron heeft geen labels. De ontleder is getest op echte records; wat niet past valt terug op alleen een plaats. |
 | **Vrije-tekst-datums blijven tekst, met Warning** | het is bron-informatie ("Reproductie gemaakt in 1989"); weglaten zou die kwijtraken, een Violation zou de run blokkeren. |
 | **Persoon of organisatie uit de naam** | de bron maakt geen onderscheid. Een fout daarin is onschuldig; de node is dan wel van het andere type. |
@@ -51,3 +51,4 @@ Twee lijsten: wat nog besloten of uitgezocht moet worden, en welke keuzes zijn g
 | **Records die falen laten geen halve triples achter** | een record wordt eerst apart opgebouwd. |
 | **Warnings blokkeren niet, Violations wel** | bekende hiaten in de bron mogen publicatie niet tegenhouden. |
 | **De API-sleutel alleen uit de omgeving** | hij staat niet in `config.yml`, niet in de log (`oai_client.redact`) en niet in de fixtures. |
+| **Geen opzoektabel naar de CHO-URI's** | koppelen in SPARQL op `ceo:rijksmonumentnummer` volstaat; een tabel maakt de oogst afhankelijk van het CHO-endpoint. |
