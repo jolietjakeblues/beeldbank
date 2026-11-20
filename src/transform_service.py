@@ -156,11 +156,31 @@ def parse_address(values: list) -> Optional[dict]:
 
 def parse_map_place(values: list) -> Optional[dict]:
     """`dcterms:spatial` van minuutplans, verzamelplans en aanwijzende tafels: plaats, land, kadastrale
-    gemeentecode, provincie. Geeft {'place', 'province'} of None."""
+    gemeentecode, provincie. Geeft {'place', 'province', 'code'} of None.
+
+    De gemeentecode (vijf cijfers, ook het begin van het inventarisnummer: MIN05055… is Elst) wordt niet
+    gepubliceerd, maar wel gebruikt als sleutel: dezelfde naam komt voor bij verschillende kadastrale gemeenten
+    (Driel 05045 en 05112, Valkenburg 08208 en 11115)."""
+    codes = [v for v in values if v.isdigit()]
     rest = [v for v in values if not v.isdigit() and v.lower() != 'nederland']
     if not rest:
         return None
-    return {'place': rest[0], 'province': rest[1] if len(rest) > 1 else None}
+    return {'place': rest[0], 'province': rest[1] if len(rest) > 1 else None, 'code': codes[0] if codes else None}
+
+
+def map_place_key(parsed: dict) -> str:
+    """Sleutel van de plaats van een kaart of tafel: gemeentecode én naam. Alleen de naam is niet genoeg (zie
+    parse_map_place); alleen de code ook niet, want de bron geeft bij enkele codes twee namen (08117 Moercapelle en
+    Zevenhuizen) en een plaats heeft precies één naam. Zonder code: naam en provincie."""
+    if parsed.get('code'):
+        return f"kadastrale-gemeente/{parsed['code']}/{parsed['place']}"
+    return f"plaats/{parsed['place']}/{parsed.get('province') or ''}"
+
+
+def province_key(name: str) -> str:
+    """Sleutel van een provincie: los van de plaatsen, anders is de provincie Groningen dezelfde node als de plaats
+    Groningen (en ligt Groningen in Groningen)."""
+    return f'provincie/{name}'
 
 
 def media_uuids(fields: dict) -> list:
@@ -282,11 +302,11 @@ def _add_place(graph: Graph, config: dict, work: URIRef, kind: str, spatial: lis
         parsed = parse_map_place(spatial)
         if not parsed:
             return
-        place = _node(config, f"place/{parsed['place']}", 'place')
+        place = _node(config, map_place_key(parsed), 'place')
         graph.add((place, RDF.type, SDO.Place))
         graph.add((place, SDO.name, Literal(parsed['place'], lang='nl')))
         if parsed['province']:
-            province = _node(config, f"place/{parsed['province']}", 'place')
+            province = _node(config, province_key(parsed['province']), 'place')
             graph.add((province, RDF.type, SDO.AdministrativeArea))
             graph.add((province, SDO.name, Literal(parsed['province'], lang='nl')))
             graph.add((place, SDO.containedInPlace, province))

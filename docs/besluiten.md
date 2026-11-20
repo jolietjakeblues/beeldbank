@@ -16,6 +16,7 @@ Twee lijsten: wat nog besloten of uitgezocht moet worden, en welke keuzes zijn g
 | 8 | **Grootte** | Een steekproef geeft ongeveer 4,7 kB JSON-LD per foto: de foto's alleen al zijn dan circa 2,6 GB. De Triply-import ervan (80 bestanden van 7.000 records) is niet getest. | beheerder van de pijplijn | eerste volledige run handmatig, let op de looptijd van `publish` |
 | 9 | **NDE Datasetregister** | De dataset moet nog met een beschrijving worden aangemeld, zoals de andere RCE-datasets. Los van deze pijplijn. | RCE | n.v.t. |
 | 10 | **Eerste volledige run** | Nog niet gedraaid. Looptijd van de foto's, de Triply-import en het gedrag van `--mode overwrite` bij een tweede run zijn nog niet gezien. | beheerder van de pijplijn | zie [beheer.md](beheer.md) |
+| 11 | **Provincienaam als plaatsnaam** | Bij 184 kaarten en tafels is de plaats de naam van de provincie: 182 met code 04029 heten "Overijssel" (27 andere met die code "Holten"), 2 met code 09084 "Zeeland" (62 andere "Retranchement"). Ook de minuutplan-WFS van de RCE (`misc:Minuutplanbegrenzingen`) geeft bij MIN04029E08 als gemeente "Overijssel". Verder heeft code 08117 twee namen: Moercapelle (31) en Zevenhuizen (1). De ETL neemt over wat de bron geeft; die records krijgen een eigen plaats, los van de provincie. | beheerder van de beeldbank | plaats "Overijssel" (kadastrale gemeente 04029) naast "Holten" |
 
 ## Mogelijke vervolgstappen
 
@@ -43,6 +44,7 @@ Twee lijsten: wat nog besloten of uitgezocht moet worden, en welke keuzes zijn g
 | **Records zonder inhoud overslaan** | enkele records hebben alleen een link zonder beeld (5 van 5.234 bij de prenten). Ze worden geteld en met hun identifier in het manifest gezet; de controle faalt er niet op. |
 | **`dcterms:isPartOf` met één teken niet publiceren** | dat is de sectieletter van een kadastrale kaart en staat al in het inventarisnummer. |
 | **Gemeentecode van kaarten niet publiceren** | de betekenis (kadastraal of historisch) is niet vastgesteld. |
+| **Gemeentecode wel als sleutel van de plaats** (20 november 2026) | met alleen de naam vielen kadastrale gemeenten met dezelfde naam samen (17 namen, 7.771 kaarten en tafels; Valkenburg, Bergen, Rijswijk, Driel, ...) en waren provincie en gelijknamige plaats één node (Groningen lag in Groningen, de provincie Zeeland in Noord-Brabant). Sleutel nu: code plus naam; provincie met een eigen sleutel. De code zelf wordt nog steeds niet gepubliceerd. Gevolg: alle plaats- en provincie-URI's van kaarten en tafels veranderen bij de volgende run. |
 | **Monument als eigen node met alleen het rijksmonumentnummer** | de CHO-URI is niet af te leiden uit dat nummer; de beschrijving staat in de kennisgraaf, dus er komen geen tweede, afwijkende gegevens. Zelfde opzet als de bibliotheek. |
 | **Adres uit `dcterms:spatial` met heuristiek** | de bron heeft geen labels. De ontleder is getest op echte records; wat niet past valt terug op alleen een plaats. |
 | **Vrije-tekst-datums blijven tekst, met Warning** | het is bron-informatie ("Reproductie gemaakt in 1989"); weglaten zou die kwijtraken, een Violation zou de run blokkeren. |

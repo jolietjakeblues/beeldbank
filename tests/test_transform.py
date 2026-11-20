@@ -73,9 +73,37 @@ def test_adres_leeg():
 
 def test_plaats_van_een_kaart():
     assert T.parse_map_place(['Asten', 'Nederland', '10007', 'Noord-Brabant']) == {
-        'place': 'Asten', 'province': 'Noord-Brabant'}
-    assert T.parse_map_place(['Asten']) == {'place': 'Asten', 'province': None}
+        'place': 'Asten', 'province': 'Noord-Brabant', 'code': '10007'}
+    assert T.parse_map_place(['Asten']) == {'place': 'Asten', 'province': None, 'code': None}
     assert T.parse_map_place([]) is None
+
+
+def test_zelfde_naam_andere_kadastrale_gemeente_is_een_andere_plaats():
+    # Valkenburg (Zuid-Holland) en Valkenburg (Limburg); Driel twee keer in Gelderland
+    zh = T.parse_map_place(['Valkenburg', 'Nederland', '08208', 'Zuid-Holland'])
+    li = T.parse_map_place(['Valkenburg', 'Nederland', '11115', 'Limburg'])
+    assert T.map_place_key(zh) != T.map_place_key(li)
+    d1 = T.parse_map_place(['Driel', 'Nederland', '05045', 'Gelderland'])
+    d2 = T.parse_map_place(['Driel', 'Nederland', '05112', 'Gelderland'])
+    assert T.map_place_key(d1) != T.map_place_key(d2)
+    # zelfde code, zelfde naam: zelfde plaats
+    assert T.map_place_key(zh) == T.map_place_key(T.parse_map_place(['Valkenburg', 'Nederland', '08208', 'Zuid-Holland']))
+    # zelfde code, andere naam (de bron doet dat bij 08117): twee plaatsen, elk met één naam
+    assert T.map_place_key(T.parse_map_place(['Moercapelle', 'Nederland', '08117', 'Zuid-Holland'])) != \
+        T.map_place_key(T.parse_map_place(['Zevenhuizen', 'Nederland', '08117', 'Zuid-Holland']))
+
+
+def test_provincie_is_niet_dezelfde_node_als_de_plaats(config):
+    from rdflib import Graph
+    graph = Graph()
+    werk = URIRef('https://example.org/werk')
+    T._add_place(graph, config, werk, 'map', ['Groningen', 'Nederland', '01020', 'Groningen'])
+    plaats = graph.value(werk, SDO.contentLocation)
+    provincie = graph.value(plaats, SDO.containedInPlace)
+    assert plaats != provincie
+    assert (provincie, RDF.type, SDO.AdministrativeArea) in graph
+    assert (plaats, RDF.type, SDO.AdministrativeArea) not in graph
+    assert graph.value(provincie, SDO.containedInPlace) is None
 
 
 def test_organisatie_of_persoon():
