@@ -1,6 +1,6 @@
 # Mapping: OAI `oai_dc` naar schema.org
 
-Alleen de foto's worden geoogst. De mapping van de andere sets (tekeningen, prenten, kaarten, tafels) staat er ook in; die is getest maar uitgeschakeld.
+Alle zes sets van `tenant:rce` worden geoogst (foto's, bouwtekeningen, prenten en oude tekeningen, minuutplans, verzamelplans, aanwijzende tafels), elk als eigen graph.
 
 De bron levert Dublin Core zonder labels. De betekenis van een veld volgt uit de volgorde en de vorm van de waarde; daarom zijn de
 heuristieken (adres, datum, identifiers) aparte functies in `src/transform_service.py` met eigen tests. Lege elementen, waarvan de

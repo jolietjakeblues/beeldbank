@@ -48,9 +48,9 @@ jobs:
       - name: Functionele tests en SHACL-tests
         run: python -m pytest
 
-  # Alleen de foto's worden geoogst. Meer bronnen draaien parallel, elk in een eigen job (zie config/config.yml). Gemeten op
-  # 13 november 2026: een OAI-pagina met 200 records duurt ongeveer een halve seconde; de foto's (565.000 records, 2.826
-  # pagina's) nemen dus naar schatting 45 tot 60 minuten. De time-out laat ruim marge voor een trage bron.
+  # Elke bron draait parallel in een eigen job en wordt een eigen graph (zie SOURCES in config/config.yml; houd de matrix gelijk).
+  # Een OAI-pagina met 200 records duurt ongeveer een halve seconde; de foto's (565.000 records, 2.826 pagina's) zijn de langste
+  # job, naar schatting 1,5 tot 2 uur. De time-out laat ruim marge voor een trage bron.
   harvest:
     needs: test
     runs-on: ubuntu-latest
@@ -58,7 +58,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        source: [photos]
+        source: [photos, oat, architectural_drawings, minuutplans, old_prints_and_drawings, verzamelplans]
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7

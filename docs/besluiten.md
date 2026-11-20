@@ -32,7 +32,7 @@ Twee lijsten: wat nog besloten of uitgezocht moet worden, en welke keuzes zijn g
 
 | Besluit | Waarom |
 |---|---|
-| **Alleen de foto's (set `photos`)** | opdracht van de beheerder: dit is de enige oogst die nodig is. De andere sets staan uitgeschakeld in de config; code, shapes en tests ondersteunen ze nog. |
+| **Alle zes sets van `tenant:rce`, elk een eigen graph** | opdracht van de beheerder (eerst alleen de foto's, daarna ook de andere vijf). Een eigen graph per set maakt opnieuw publiceren of weghalen per set mogelijk. |
 | **Alleen OAI `oai_dc`, geen REST-API** | de OAI is het kanaal dat de beheerder noemde, geeft alle zes sets met `completeListSize` voor de volledigheidscontrole, en heeft per record een stabiele identifier. |
 | **Alleen `tenant:rce`** | de sets van `gla` en `wfm` leveren geen records. |
 | **Elke run oogst alles** | de OAI meldt geen verwijderde records (`deletedRecord = no`): een deltaoogst zou verwijderingen missen. |

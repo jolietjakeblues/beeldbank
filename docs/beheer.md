@@ -42,7 +42,7 @@ python src/validate_service.py data/photos-*.jsonld
 ```
 
 Zonder `--max-records` oogst dit alle 565.178 foto's. Gemeten op 13 november 2026: een OAI-pagina met 200 records duurt ongeveer
-een halve seconde; een volledige oogst van de 15.686 minuutplans (een andere set, inmiddels uitgeschakeld) duurde ongeveer 70 seconden
+een halve seconde; een volledige oogst van de 15.686 minuutplans duurde ongeveer 70 seconden
 inclusief transformatie. Voor de foto's is dat een schatting van 45 tot 60 minuten; die is nog niet gemeten.
 
 ## Foutmeldingen

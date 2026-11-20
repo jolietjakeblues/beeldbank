@@ -34,29 +34,29 @@ THUMBNAIL_URL: 'https://images.memorix.nl/rce/thumb/350x350/{media}.jpg'
 #   print     schema:VisualArtwork    (adres of plaats)
 #   map       schema:Map              (plaats, land, kadastrale gemeentecode, provincie)
 #   table     schema:CreativeWork     (idem)
-# Alleen de foto's worden geoogst. De andere sets van tenant:rce zijn uitgeschakeld (code, shapes en tests ondersteunen ze
-# wel): haal de # weg om er een aan te zetten en voeg de naam toe aan de matrix in .github/workflows/harvest_beeldbank.yml.
-#   Omvang volgens de OAI op 13 november 2026: oat 143.317, architectural_drawings 45.820, minuutplans 15.686,
-#   old_prints_and_drawings 5.234, verzamelplans 1.295.
+# Elke bron is een eigen graph (…/graphs/{naam}). Een bron toevoegen of weghalen: pas ook de matrix aan in
+# .github/workflows/harvest_beeldbank.yml.
+#   Omvang volgens de OAI op 20 november 2026: photos 565.179, oat 143.317, architectural_drawings 45.820,
+#   minuutplans 15.686, old_prints_and_drawings 5.234, verzamelplans 1.295.
 SOURCES:
   photos:
     kind: 'photo'
     set: 'tenant:rce:search_s_entity_type:photos'
-  # architectural_drawings:
-  #   kind: 'drawing'
-  #   set: 'tenant:rce:search_s_entity_type:architectural_drawings'
-  # old_prints_and_drawings:
-  #   kind: 'print'
-  #   set: 'tenant:rce:search_s_entity_type:old_prints_and_drawings'
-  # minuutplans:
-  #   kind: 'map'
-  #   set: 'tenant:rce:search_s_entity_type:minuutplans'
-  # verzamelplans:
-  #   kind: 'map'
-  #   set: 'tenant:rce:search_s_entity_type:verzamelplans'
-  # oat:
-  #   kind: 'table'
-  #   set: 'tenant:rce:search_s_entity_type:oat'
+  architectural_drawings:
+    kind: 'drawing'
+    set: 'tenant:rce:search_s_entity_type:architectural_drawings'
+  old_prints_and_drawings:
+    kind: 'print'
+    set: 'tenant:rce:search_s_entity_type:old_prints_and_drawings'
+  minuutplans:
+    kind: 'map'
+    set: 'tenant:rce:search_s_entity_type:minuutplans'
+  verzamelplans:
+    kind: 'map'
+    set: 'tenant:rce:search_s_entity_type:verzamelplans'
+  oat:
+    kind: 'table'
+    set: 'tenant:rce:search_s_entity_type:oat'
 
 ### Kwaliteitsbewaking ###
 # aantal records dat bij de transformatie mag falen voordat de run als mislukt geldt (0 = geen enkel)
