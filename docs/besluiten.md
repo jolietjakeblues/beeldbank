@@ -51,4 +51,5 @@ Twee lijsten: wat nog besloten of uitgezocht moet worden, en welke keuzes zijn g
 | **Records die falen laten geen halve triples achter** | een record wordt eerst apart opgebouwd. |
 | **Warnings blokkeren niet, Violations wel** | bekende hiaten in de bron mogen publicatie niet tegenhouden. |
 | **De API-sleutel alleen uit de omgeving** | hij staat niet in `config.yml`, niet in de log (`oai_client.redact`) en niet in de fixtures. |
+| **Onderwerpen koppelen met een vaste opzoeklijst, zonder te gokken** | de OAI levert alleen tekst. De lijst (CHT en ABR) staat in de repository, zodat de run niet van het endpoint afhangt. Een woord met meer dan één mogelijk concept krijgt geen URI. |
 | **Geen opzoektabel naar de CHO-URI's** | koppelen in SPARQL op `ceo:rijksmonumentnummer` volstaat; een tabel maakt de oogst afhankelijk van het CHO-endpoint. |

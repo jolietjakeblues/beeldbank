@@ -57,6 +57,18 @@ inclusief transformatie. Voor de foto's is dat een schatting van 45 tot 60 minut
 | `noRecordsMatch` | de set bestaat niet of is leeg; de oogst levert dan 0 records en de controle faalt |
 | HTTP 429/503 | de client wacht en probeert opnieuw (`SRC_RETRIES`, `SRC_BACKOFF`) |
 
+## De thesaurus-lijst vernieuwen
+
+De onderwerpen worden gekoppeld met `config/thesaurus.json.gz`. De lijst is een momentopname van de CHT en de ABR; de wekelijkse run vernieuwt
+hem niet. Vernieuwen, bijvoorbeeld na een nieuwe thesaurusversie:
+
+```bash
+python tools/maak_thesaurus.py
+python -m pytest
+```
+
+Dat haalt de thesauri uit het CHO-endpoint (enkele minuten) en controleert de download. Commit daarna het nieuwe bestand.
+
 ## Terugdraaien
 
 De foto's staan in de graph `…/rce/afbeeldingen/graphs/photos`. Een volgende run vervangt die graph. Wilt u ze verwijderen,

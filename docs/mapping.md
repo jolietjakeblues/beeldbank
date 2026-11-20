@@ -44,9 +44,19 @@ samengevoegd. De rol van de maker ("Fotograaf") staat alleen in het `ese`-formaa
 
 | Bron | schema.org |
 |---|---|
-| `dc:subject` | `schema:about` → `schema:DefinedTerm` met `schema:name`, per term gedeeld. Alleen tekst, geen thesaurus-URI |
+| `dc:subject` | `schema:about` → `schema:DefinedTerm` met `schema:name`, per term gedeeld. De bron levert alleen het woord; staat het ondubbelzinnig in de CHT of de ABR, dan krijgt de term `schema:sameAs` naar dat concept (zie "Thesaurus-koppeling") |
 | `dcterms:coverage` `Monumentnummer: N` | `schema:about` → `schema:LandmarksOrHistoricalBuildings`, per nummer gedeeld, met `schema:identifier` (`propertyID` `rijksmonumentnummer`). Zie "Monumenten" |
 | `dcterms:isPartOf` | `schema:isPartOf` → `schema:Collection` met naam. Waarden van één teken vallen af: dat is de sectieletter van een kadastrale kaart en staat al in het inventarisnummer |
+
+## Thesaurus-koppeling
+
+De OAI geeft onderwerpen als tekst, zonder URI. `tools/maak_thesaurus.py` maakt daarom een opzoeklijst `config/thesaurus.json.gz`
+(woord → URI van het concept in de CHT of de ABR, uit het CHO-endpoint). De transformatie leest die lijst; de wekelijkse run roept het
+endpoint dus niet aan. Een term krijgt `schema:sameAs` alleen bij een ondubbelzinnige treffer. Per thesaurus (eerst CHT, dan ABR) wordt
+gezocht op de voorkeursterm, de voorkeursterm zonder toelichting tussen haakjes en de alternatieve term; bij twee of meer concepten voor
+hetzelfde woord (bijvoorbeeld "forten": verdedigingswerk of stookplaats) komt er geen koppeling. Concepten met status gidsterm,
+twijfelachtig of vervallen tellen niet mee. In een steekproef van de foto's kreeg 68% van de 9.045 verschillende woorden een koppeling.
+De rest zijn onder meer plaatsnamen, namen en vrije trefwoorden die niet in de thesauri staan, en dubbelzinnige woorden.
 
 ## Monumenten
 

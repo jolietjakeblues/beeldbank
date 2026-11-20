@@ -33,7 +33,7 @@ eigen job in de workflow. De tenants `gla`, `wfm` en `zzm` leveren geen records.
 
 ## Wat er in de data zit
 
-Per foto titel, beschrijving, datum, maker, rechten (`schema:license`), onderwerpen (tekst), collectie, de plaats of het adres van het
+Per foto titel, beschrijving, datum, maker, rechten (`schema:license`), onderwerpen (tekst, met een link naar de CHT of ABR als het woord ondubbelzinnig is), collectie, de plaats of het adres van het
 afgebeelde object (met postcode), het **rijksmonument** (`Monumentnummer: N` wordt een monument-node met dat rijksmonumentnummer), het
 beeld (`schema:ImageObject` met bestand en miniatuur) en de link naar de beeldbank. Alle details in [docs/mapping.md](docs/mapping.md).
 
