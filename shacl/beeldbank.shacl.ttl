@@ -118,7 +118,17 @@ bb:WorkType
                      sh:message "CreativeWork: schema:image moet een URI van een schema:ImageObject zijn."@nl ] ;
 .
 
-# Een monument is alleen een IRI naar de kennisgraaf (cho-kennis); er staat geen beschrijving van in deze dataset.
+# Een monument is een gedeelde node met alleen het rijksmonumentnummer; de koppeling met de CHO-data gaat via dat nummer.
+
+bb:MonumentShape
+    a              sh:NodeShape ;
+    sh:targetClass schema:LandmarksOrHistoricalBuildings ;
+    sh:name        "Monument: eigenschappen"@nl ;
+    sh:description "Een monument heeft precies één rijksmonumentnummer (schema:identifier met propertyID rijksmonumentnummer)."@nl ;
+    sh:property    [ sh:path schema:identifier ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ; sh:class schema:PropertyValue ;
+                     sh:severity sh:Violation ;
+                     sh:message "Monument: precies één schema:identifier (PropertyValue met het rijksmonumentnummer) verwacht."@nl ] ;
+.
 
 bb:ImageObjectShape
     a              sh:NodeShape ;

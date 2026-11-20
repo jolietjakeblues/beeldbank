@@ -208,6 +208,23 @@ def _identifier(graph: Graph, config: dict, work: URIRef, rid: str, property_id:
     graph.add((work, SDO.identifier, node))
 
 
+def _monument(graph: Graph, config: dict, work: URIRef, number: str):
+    """Gedeelde node per rijksmonumentnummer, met alleen dat nummer.
+
+    Het nummer in de beeldbank is het rijksmonumentnummer. De URI's van de monumenten in de CHO-data (`cho-kennis/id/rijksmonument/N`)
+    gebruiken een ander getal (het cultuurhistorisch objectnummer): `.../rijksmonument/13417` heeft rijksmonumentnummer 17787.
+    De URI is dus niet af te leiden. Koppelen aan de CHO-data gaat in SPARQL via `ceo:rijksmonumentnummer`.
+    """
+    monument = _node(config, f'rijksmonument/{number}', 'monument')
+    graph.add((monument, RDF.type, SDO.LandmarksOrHistoricalBuildings))
+    ident = _node(config, f'rijksmonument/{number}/nummer', 'propertyvalue')
+    graph.add((ident, RDF.type, SDO.PropertyValue))
+    graph.add((ident, SDO.propertyID, Literal('rijksmonumentnummer')))
+    graph.add((ident, SDO.value, Literal(number, datatype=XSD.string)))
+    graph.add((monument, SDO.identifier, ident))
+    graph.add((work, SDO.about, monument))
+
+
 def _agent(graph: Graph, config: dict, name: str) -> URIRef:
     """Gedeelde node per naam (persoon of organisatie). Zonder authority-nummer kan een homoniem erbij zitten."""
     if is_organization(name):
@@ -343,7 +360,7 @@ def transform_record(graph: Graph, config: dict, header: dict, fields: dict, sou
     for value in fields.get('dcterms:coverage', []):
         m = _MONUMENT.match(value)
         if m:
-            graph.add((work, SDO.about, URIRef(config['MONUMENT_URI'].format(number=m.group(1)))))
+            _monument(graph, config, work, m.group(1))
 
     # collectie
     for name_part in unique(fields.get('dcterms:isPartOf', [])):

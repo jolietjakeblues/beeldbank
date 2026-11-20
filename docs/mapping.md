@@ -45,8 +45,17 @@ samengevoegd. De rol van de maker ("Fotograaf") staat alleen in het `ese`-formaa
 | Bron | schema.org |
 |---|---|
 | `dc:subject` | `schema:about` → `schema:DefinedTerm` met `schema:name`, per term gedeeld. Alleen tekst, geen thesaurus-URI |
-| `dcterms:coverage` `Monumentnummer: N` | `schema:about` → `https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/rijksmonument/N`, alleen de IRI |
+| `dcterms:coverage` `Monumentnummer: N` | `schema:about` → `schema:LandmarksOrHistoricalBuildings`, per nummer gedeeld, met `schema:identifier` (`propertyID` `rijksmonumentnummer`). Zie "Monumenten" |
 | `dcterms:isPartOf` | `schema:isPartOf` → `schema:Collection` met naam. Waarden van één teken vallen af: dat is de sectieletter van een kadastrale kaart en staat al in het inventarisnummer |
+
+## Monumenten
+
+Het nummer bij `Monumentnummer: N` is het **rijksmonumentnummer**. De URI's van de monumenten in de CHO-data
+(`.../cho-kennis/id/rijksmonument/N`) gebruiken een ander getal, het cultuurhistorisch objectnummer: `.../rijksmonument/13417` heeft
+rijksmonumentnummer `17787`. De URI is dus niet uit het nummer af te leiden, en een gok wijst naar een ander monument. Daarom is een
+monument hier een eigen, per nummer gedeelde node (`.../rce/afbeeldingen/id/monument/{uuid3}`) van het type
+`schema:LandmarksOrHistoricalBuildings`, met `schema:identifier` → `schema:PropertyValue` (`propertyID` `rijksmonumentnummer`). Dezelfde
+opzet als in de bibliotheek-ETL. Koppelen aan de CHO-data gaat in SPARQL via `ceo:rijksmonumentnummer`.
 
 ## Plaats
 

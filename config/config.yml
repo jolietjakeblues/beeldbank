@@ -27,8 +27,6 @@ BEELDBANK_URL: 'https://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/{
 IMAGE_URL: 'https://images.memorix.nl/rce/thumb/fullsize/{media}.jpg'
 THUMBNAIL_URL: 'https://images.memorix.nl/rce/thumb/350x350/{media}.jpg'
 
-# Rijksmonument waar "Monumentnummer: N" naar verwijst (alleen de IRI, zonder eigen beschrijving).
-MONUMENT_URI: 'https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/rijksmonument/{number}'
 
 # Bronnen. Elke bron is een OAI-set; kind bepaalt het schema.org-type en de verwerking van de plaatsgegevens:
 #   photo     schema:Photograph       (adres van het afgebeelde object)
