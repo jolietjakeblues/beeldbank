@@ -81,7 +81,11 @@ huisnummer lijkt het huisnummer. Zonder huisnummer hoort alles vóór de plaats 
 
 Voor kaarten (`minuutplans`, `verzamelplans`) en tafels (`oat`) is de rij: plaats, "Nederland", kadastrale gemeentecode, provincie.
 Het werk krijgt `schema:contentLocation` → `Place` (de plaats) met `schema:containedInPlace` → `AdministrativeArea` (de provincie).
-De gemeentecode wordt niet gepubliceerd.
+De gemeentecode wordt niet gepubliceerd, maar is wel de sleutel van de plaats: de URI van de plaats komt uit gemeentecode
+plus naam, die van de provincie uit `provincie/` plus naam. Met alleen de naam als sleutel vielen kadastrale gemeenten met
+dezelfde naam samen (17 namen, bijvoorbeeld Valkenburg in Zuid-Holland en Limburg, Driel twee keer in Gelderland), en
+was de provincie Groningen dezelfde node als de plaats Groningen. Code plus naam, en niet alleen de code, omdat de bron
+bij enkele codes twee namen geeft en een plaats precies één naam heeft (zie [besluiten.md](besluiten.md), punt 11).
 
 ## Beeld
 
