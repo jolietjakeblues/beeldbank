@@ -133,6 +133,14 @@ def test_leeg_record_wordt_overgeslagen_en_geteld(config, tmp_path, monkeypatch)
     assert state['skipped_ids'] == ['t:leeg-1']
 
 
-def test_alleen_de_fotos_staan_aan_in_de_config(config):
-    assert list(config['SOURCES']) == ['photos']
-    assert config['SOURCES']['photos']['set'] == 'tenant:rce:search_s_entity_type:photos'
+def test_alle_bronnen_staan_aan_in_config_en_workflow(config):
+    import re
+    from pathlib import Path
+    bronnen = ['photos', 'oat', 'architectural_drawings', 'minuutplans', 'old_prints_and_drawings', 'verzamelplans']
+    assert sorted(config['SOURCES']) == sorted(bronnen)
+    for naam, bron in config['SOURCES'].items():
+        assert bron['set'] == f'tenant:rce:search_s_entity_type:{naam}'
+    # de matrix van de workflow moet dezelfde bronnen hebben als de config
+    workflow = (Path(__file__).parent.parent / '.github' / 'workflows' / 'harvest_beeldbank.yml').read_text(encoding='utf-8')
+    matrix = re.search(r'source:\s*\[([^\]]*)\]', workflow).group(1)
+    assert sorted(x.strip() for x in matrix.split(',')) == sorted(config['SOURCES'])

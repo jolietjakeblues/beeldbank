@@ -21,12 +21,15 @@ Elke run oogst alles: de OAI meldt geen verwijderde records (`deletedRecord = no
 
 | Set | Records | Wordt | Graph in Triply |
 |---|---:|---|---|
-| `tenant:rce:search_s_entity_type:photos` | 565.178 | `schema:Photograph` | `https://linkeddata.cultureelerfgoed.nl/rce/afbeeldingen/graphs/photos` |
+| `…:photos` | 565.179 | `schema:Photograph` | `https://linkeddata.cultureelerfgoed.nl/rce/afbeeldingen/graphs/photos` |
+| `…:oat` (aanwijzende tafels) | 143.317 | `schema:CreativeWork` | `…/graphs/oat` |
+| `…:architectural_drawings` (bouwtekeningen) | 45.820 | `schema:VisualArtwork` | `…/graphs/architectural_drawings` |
+| `…:minuutplans` (kadastrale minuutplans) | 15.686 | `schema:Map` | `…/graphs/minuutplans` |
+| `…:old_prints_and_drawings` (prenten, oude tekeningen) | 5.234 | `schema:VisualArtwork` | `…/graphs/old_prints_and_drawings` |
+| `…:verzamelplans` | 1.295 | `schema:Map` | `…/graphs/verzamelplans` |
 
-Aantal volgens de OAI op 13 november 2026. **Alleen de foto's worden geoogst.** De andere sets van `tenant:rce` (aanwijzende tafels,
-bouwtekeningen, prenten, minuutplans, verzamelplans) zijn uitgeschakeld in `config/config.yml` en in de workflow; de code, de shapes en de
-tests ondersteunen ze wel, dus aanzetten kost geen nieuw werk. De tenants `gla` en `wfm` leveren geen records. Zie
-[docs/besluiten.md](docs/besluiten.md).
+De sets heten `tenant:rce:search_s_entity_type:{naam}`; aantallen volgens de OAI op 20 november 2026. Elke set is een eigen graph en een
+eigen job in de workflow. De tenants `gla`, `wfm` en `zzm` leveren geen records. Zie [docs/besluiten.md](docs/besluiten.md).
 
 ## Wat er in de data zit
 
