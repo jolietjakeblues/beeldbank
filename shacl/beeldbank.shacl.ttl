@@ -210,6 +210,9 @@ bb:DefinedTermShape
     sh:property    [ sh:path schema:name ; sh:minCount 1 ; sh:datatype rdf:langString ; sh:uniqueLang true ;
                      sh:severity sh:Violation ;
                      sh:message "DefinedTerm: schema:name moet tekst met taalcode zijn, precies één per taal."@nl ] ;
+    sh:property    [ sh:path schema:sameAs ; sh:maxCount 1 ; sh:nodeKind sh:IRI ;
+                     sh:pattern "^https://data\\.cultureelerfgoed\\.nl/term/id/(cht|abr)/" ; sh:severity sh:Violation ;
+                     sh:message "DefinedTerm: schema:sameAs is hooguit één URI van een concept in de CHT of de ABR."@nl ] ;
 .
 
 bb:CollectionShape

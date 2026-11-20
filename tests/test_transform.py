@@ -213,3 +213,31 @@ def test_record_met_alleen_een_lege_link_is_leeg():
     assert T.is_empty(fields)
     assert not T.is_empty({'dcterms:title': ['Titel']})
     assert not T.is_empty({'dcterms:relation': ['f1a61dc0-e807-5033-b88e-ef82613d0c90']})
+
+
+# --- thesaurus --------------------------------------------------------------
+
+def test_term_krijgt_de_thesaurus_uri_als_het_woord_ondubbelzinnig_is(config):
+    uri = T.thesaurus_uri(config, 'Bruggen ')          # hoofdletters en spaties doen er niet toe
+    assert uri == 'https://data.cultureelerfgoed.nl/term/id/cht/6a7899a2-3306-458e-90e6-6370afe541db'
+
+
+def test_dubbelzinnig_woord_krijgt_geen_uri(config):
+    # "forten" is in de CHT zowel verdedigingswerk als stookplaats: niet gokken
+    assert T.thesaurus_uri(config, 'forten') is None
+    assert T.thesaurus_uri(config, 'een woord dat niet bestaat') is None
+
+
+def test_de_term_in_de_graph_heeft_same_as_naar_cht_of_abr(graph_for):
+    graph = graph_for('photos')
+    terms = list(graph.subjects(RDF.type, SDO.DefinedTerm))
+    linked = [t for t in terms if list(graph.objects(t, SDO.sameAs))]
+    assert linked, 'geen enkele term is gekoppeld'
+    for t in linked:
+        [uri] = graph.objects(t, SDO.sameAs)
+        assert str(uri).startswith(('https://data.cultureelerfgoed.nl/term/id/cht/', 'https://data.cultureelerfgoed.nl/term/id/abr/'))
+
+
+def test_zonder_lijst_geen_koppelingen(config):
+    assert T.thesaurus_uri({**config, 'THESAURUS_PATH': 'bestaat-niet.json.gz'}, 'bruggen') is None
+    assert T.thesaurus_uri({k: v for k, v in config.items() if k != 'THESAURUS_PATH'}, 'bruggen') is None

@@ -8,8 +8,12 @@ volgorde en de vorm van de waarde. Daarom staan de heuristieken (adres, datum, i
 geteste functies. De mapping staat in `docs/mapping.md`.
 """
 import datetime
+import gzip
+import json
 import re
 from collections import defaultdict
+from functools import lru_cache
+from pathlib import Path
 from typing import Optional
 
 from rdflib import Graph, Literal, URIRef
@@ -237,12 +241,38 @@ def _agent(graph: Graph, config: dict, name: str) -> URIRef:
     return node
 
 
+def norm_label(text: str) -> str:
+    """Sleutel voor het opzoeken van een term in de thesaurus: hoofdletters en dubbele spaties doen er niet toe."""
+    return re.sub(r'\s+', ' ', text or '').strip().casefold()
+
+
+@lru_cache(maxsize=4)
+def _thesaurus(path: str) -> dict:
+    """{genormeerd label: thesaurus-URI}, gemaakt door tools/maak_thesaurus.py. Alleen woorden met precies één treffer."""
+    full = Path(path) if Path(path).is_absolute() else Path(__file__).resolve().parent.parent / path
+    if not full.exists():
+        return {}
+    opener = gzip.open if full.suffix == '.gz' else open
+    with opener(full, 'rt', encoding='utf-8') as f:
+        return json.load(f)['labels']
+
+
+def thesaurus_uri(config: dict, term: str) -> Optional[str]:
+    path = config.get('THESAURUS_PATH')
+    return _thesaurus(path).get(norm_label(term)) if path else None
+
+
 def _named(graph: Graph, config: dict, work: URIRef, predicate: URIRef, name: str, kind: str, rdf_type: URIRef) -> URIRef:
     """Gedeelde benoemde node (term, collectie): zelfde naam, zelfde adres."""
     node = _node(config, f'{kind}/{name}', kind)
     graph.add((node, RDF.type, rdf_type))
     graph.add((node, SDO.name, Literal(name, lang='nl')))
     graph.add((work, predicate, node))
+    if kind == 'term':
+        # De bron levert alleen het woord. Staat het ondubbelzinnig in de CHT of de ABR, dan krijgt de term die URI.
+        uri = thesaurus_uri(config, name)
+        if uri:
+            graph.add((node, SDO.sameAs, URIRef(uri)))
     return node
 
 

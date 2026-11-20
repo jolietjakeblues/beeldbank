@@ -58,6 +58,10 @@ SOURCES:
     kind: 'table'
     set: 'tenant:rce:search_s_entity_type:oat'
 
+# Opzoeklijst woord -> thesaurus-URI (CHT en ABR) voor de onderwerpen. De bron levert alleen tekst; de lijst wordt gemaakt met
+# tools/maak_thesaurus.py (zie docs/beheer.md). Ontbrekend bestand = geen koppelingen.
+THESAURUS_PATH: 'config/thesaurus.json.gz'
+
 ### Kwaliteitsbewaking ###
 # aantal records dat bij de transformatie mag falen voordat de run als mislukt geldt (0 = geen enkel)
 MAX_RECORD_ERRORS: 0
